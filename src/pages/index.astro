@@ -97,15 +97,26 @@ const categoryColor = (cat: string) => {
         <!-- Stats panel -->
         <div class="flex flex-col gap-4">
           <!-- ETA card -->
-          <div class="border border-[#ff444430] bg-[#ff44440a] rounded-xl p-5 critical-blink">
-            <div class="font-mono text-xs text-[#ff4444] tracking-widest mb-2">▲ ESTIMATED AGI ARRIVAL</div>
-            <div class="font-mono text-3xl font-bold text-white">{eta.year ?? '—'}</div>
-            <div class="font-mono text-sm text-[#7a7aa0] mt-1">± {eta.marginMonths ?? '?'} months confidence interval</div>
-            <div class="mt-3 text-xs text-[#4a4a6a] leading-relaxed">
-              Based on linear extrapolation of composite benchmark improvement rate
-              (avg. +6.2 points/6mo over 36 months).
+          {AGI_INDEX >= 100 ? (
+            <div class="border border-[#22c55e60] bg-[#22c55e0a] rounded-xl p-5" style="animation: blink-border 1s ease-in-out infinite">
+              <div class="font-mono text-xs text-[#22c55e] tracking-widest mb-2">✓ ALL THRESHOLDS EXCEEDED</div>
+              <div class="font-mono text-3xl font-bold text-[#22c55e]">AGI INDEX: 100%</div>
+              <div class="font-mono text-sm text-[#7a7aa0] mt-1">All 6 benchmarks surpass expert-human baseline</div>
+              <div class="mt-3 text-xs text-[#4a4a6a] leading-relaxed">
+                AI systems have reached or surpassed expert-human performance on every tracked benchmark simultaneously.
+                This represents our operational definition of AGI capability threshold.
+              </div>
             </div>
-          </div>
+          ) : (
+            <div class="border border-[#ff444430] bg-[#ff44440a] rounded-xl p-5 critical-blink">
+              <div class="font-mono text-xs text-[#ff4444] tracking-widest mb-2">▲ ESTIMATED AGI ARRIVAL</div>
+              <div class="font-mono text-3xl font-bold text-white">{eta.year ?? '—'}</div>
+              <div class="font-mono text-sm text-[#7a7aa0] mt-1">± {eta.marginMonths ?? '?'} months confidence interval</div>
+              <div class="mt-3 text-xs text-[#4a4a6a] leading-relaxed">
+                Based on linear extrapolation of composite benchmark improvement rate.
+              </div>
+            </div>
+          )}
 
           <!-- Stats grid -->
           <div class="grid grid-cols-2 gap-3">
@@ -118,14 +129,16 @@ const categoryColor = (cat: string) => {
               <div class="font-mono text-2xl font-bold text-[#22c55e]">{exceededCount} / {benchmarks.length}</div>
             </div>
             <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
-              <div class="font-mono text-xs text-[#4a4a6a] mb-1">RATE OF PROGRESS</div>
-              <div class="font-mono text-2xl font-bold text-[#f59e0b]">+6.2%</div>
-              <div class="font-mono text-[10px] text-[#4a4a6a]">per 6 months</div>
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">MONTHS FROM NOW</div>
+              <div class="font-mono text-2xl font-bold text-[#f59e0b]">{AGI_INDEX >= 100 ? '—' : `~${eta.monthsFromNow ?? '?'}`}</div>
+              <div class="font-mono text-[10px] text-[#4a4a6a]">{AGI_INDEX >= 100 ? 'threshold reached' : 'estimated'}</div>
             </div>
             <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
-              <div class="font-mono text-xs text-[#4a4a6a] mb-1">DAYS TO THRESHOLD</div>
-              <div class="font-mono text-2xl font-bold text-[#ff6b35]">~730</div>
-              <div class="font-mono text-[10px] text-[#4a4a6a]">optimistic scenario</div>
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">STATUS</div>
+              <div class="font-mono text-2xl font-bold" style={`color: ${AGI_INDEX >= 100 ? '#22c55e' : '#ff6b35'}`}>
+                {AGI_INDEX >= 100 ? 'REACHED' : 'IN PROGRESS'}
+              </div>
+              <div class="font-mono text-[10px] text-[#4a4a6a]">{AGI_INDEX >= 100 ? 'all benchmarks ✓' : 'per benchmarks'}</div>
             </div>
           </div>
         </div>
