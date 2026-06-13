@@ -20,7 +20,7 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'src/data/live.json');
 const HISTORY_FILE = path.join(ROOT, 'src/data/history.json');
 
-const API_BASE = 'https://api.llm-stats.com/stats/v1';
+const API_BASE = 'https://api.llm-stats.com';
 const API_KEY = process.env.LLM_STATS_API_KEY;
 
 if (!API_KEY) {
@@ -39,7 +39,7 @@ const headers = {
 const BENCHMARKS = [
   {
     id: 'arc-agi-v2',
-    llmStatsSlug: 'arc-agi-2',
+    llmStatsSlug: 'arc-agi-v2',
     name: 'ARC-AGI v2',
     category: 'Reasoning',
     humanExpertScore: 85.0,
@@ -59,7 +59,7 @@ const BENCHMARKS = [
   },
   {
     id: 'frontier-math',
-    llmStatsSlug: 'frontier-math',
+    llmStatsSlug: 'frontiermath',
     name: 'FrontierMath',
     category: 'Mathematics',
     humanExpertScore: 5.0,
@@ -69,7 +69,7 @@ const BENCHMARKS = [
   },
   {
     id: 'gpqa-diamond',
-    llmStatsSlug: 'gpqa-diamond',
+    llmStatsSlug: 'gpqa',
     name: 'GPQA Diamond',
     category: 'Science',
     humanExpertScore: 69.3,
@@ -89,7 +89,7 @@ const BENCHMARKS = [
   },
   {
     id: 'livecodebench',
-    llmStatsSlug: 'livecodebench',
+    llmStatsSlug: 'livecodebench-v6',
     name: 'LiveCodeBench',
     category: 'Coding',
     humanExpertScore: 78.0,
@@ -111,22 +111,17 @@ async function apiFetch(path) {
   return res.json();
 }
 
-/** Returns the best (max) score for a given benchmark slug, or null if not found. */
+/** Returns the top model score (0–100) for a given benchmark slug, or null if not found. */
 async function getBestScore(benchmarkSlug) {
   try {
-    // GET /v1/scores?benchmark_id=<slug>&limit=100
-    const data = await apiFetch(`/v1/scores?benchmark_id=${encodeURIComponent(benchmarkSlug)}&limit=100`);
-    const scores = data?.scores ?? data?.data ?? [];
-    if (!scores.length) return null;
-
-    const values = scores
-      .map((s) => {
-        const v = s.score ?? s.value ?? s.result;
-        return typeof v === 'number' ? v : parseFloat(v);
-      })
-      .filter((v) => !isNaN(v) && v > 0);
-
-    return values.length ? Math.max(...values) : null;
+    // GET /leaderboard/benchmarks/{slug}?top_n=1 — returns rank-1 model score (0–1 scale)
+    const data = await apiFetch(`/leaderboard/benchmarks/${encodeURIComponent(benchmarkSlug)}?top_n=1`);
+    const entry = data?.entries?.[0];
+    if (!entry) return null;
+    const raw = entry.benchmark_score ?? entry.normalized_score;
+    if (typeof raw !== 'number' || isNaN(raw)) return null;
+    // API returns 0–1; convert to 0–100 percentage
+    return Math.round(raw * 1000) / 10;
   } catch (err) {
     console.warn(`  ⚠ Could not fetch ${benchmarkSlug}: ${err.message}`);
     return null;

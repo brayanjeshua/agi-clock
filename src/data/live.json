@@ -1,20 +1,20 @@
 {
-  "agiIndex": 84.2,
-  "updatedAt": "2026-06-13T00:00:00.000Z",
+  "agiIndex": 100,
+  "updatedAt": "2026-06-13T16:53:36.176Z",
   "eta": {
-    "year": 2028,
-    "marginMonths": 18,
-    "monthsFromNow": 24
+    "year": 2026,
+    "marginMonths": 1,
+    "monthsFromNow": 2
   },
   "benchmarks": [
     {
       "id": "arc-agi-v2",
       "name": "ARC-AGI v2",
       "category": "Reasoning",
-      "aiScore": 77.1,
-      "humanExpertScore": 85.0,
-      "progress": 90.7,
-      "trend": "fast",
+      "aiScore": 85,
+      "humanExpertScore": 85,
+      "progress": 100,
+      "trend": "exceeded",
       "weight": 1.5,
       "description": "General fluid intelligence via abstract pattern tasks. Closest proxy to true general reasoning."
     },
@@ -22,10 +22,10 @@
       "id": "swe-bench",
       "name": "SWE-Bench",
       "category": "Engineering",
-      "aiScore": 71.3,
-      "humanExpertScore": 92.0,
-      "progress": 77.5,
-      "trend": "fast",
+      "aiScore": 95,
+      "humanExpertScore": 92,
+      "progress": 100,
+      "trend": "exceeded",
       "weight": 1.5,
       "description": "Real-world GitHub bug fixes requiring full codebase understanding and autonomous execution."
     },
@@ -33,32 +33,32 @@
       "id": "frontier-math",
       "name": "FrontierMath",
       "category": "Mathematics",
-      "aiScore": 23.8,
-      "humanExpertScore": 5.0,
+      "aiScore": 47.6,
+      "humanExpertScore": 5,
       "progress": 100,
       "trend": "exceeded",
-      "weight": 1.0,
+      "weight": 1,
       "description": "Expert-crafted mathematical problems beyond current textbooks. AI already exceeds expert humans."
     },
     {
       "id": "gpqa-diamond",
       "name": "GPQA Diamond",
       "category": "Science",
-      "aiScore": 79.6,
+      "aiScore": 94.6,
       "humanExpertScore": 69.3,
       "progress": 100,
       "trend": "exceeded",
-      "weight": 1.0,
+      "weight": 1,
       "description": "PhD-level questions in biology, chemistry, and physics written and validated by domain experts."
     },
     {
       "id": "mmlu-pro",
       "name": "MMLU-Pro",
       "category": "Knowledge",
-      "aiScore": 80.4,
-      "humanExpertScore": 85.0,
-      "progress": 94.6,
-      "trend": "slow",
+      "aiScore": 89.6,
+      "humanExpertScore": 85,
+      "progress": 100,
+      "trend": "exceeded",
       "weight": 0.75,
       "description": "Professional-level knowledge across 57 academic domains. Harder variant of original MMLU."
     },
@@ -66,22 +66,47 @@
       "id": "livecodebench",
       "name": "LiveCodeBench",
       "category": "Coding",
-      "aiScore": 64.2,
-      "humanExpertScore": 78.0,
-      "progress": 82.3,
-      "trend": "fast",
+      "aiScore": 91.6,
+      "humanExpertScore": 78,
+      "progress": 100,
+      "trend": "exceeded",
       "weight": 1.25,
       "description": "Competitive programming problems from Codeforces, LeetCode, AtCoder — contamination-free."
     }
   ],
   "history": [
-    { "date": "Jan 2023", "index": 31 },
-    { "date": "Jun 2023", "index": 38 },
-    { "date": "Jan 2024", "index": 51 },
-    { "date": "Jun 2024", "index": 62 },
-    { "date": "Jan 2025", "index": 71 },
-    { "date": "Jun 2025", "index": 78 },
-    { "date": "Jan 2026", "index": 82 },
-    { "date": "Jun 2026", "index": 84.2 }
+    {
+      "date": "Jan 2023",
+      "index": 31
+    },
+    {
+      "date": "Jun 2023",
+      "index": 38
+    },
+    {
+      "date": "Jan 2024",
+      "index": 51
+    },
+    {
+      "date": "Jun 2024",
+      "index": 62
+    },
+    {
+      "date": "Jan 2025",
+      "index": 71
+    },
+    {
+      "date": "Jun 2025",
+      "index": 78
+    },
+    {
+      "date": "Jan 2026",
+      "index": 82
+    },
+    {
+      "date": "Jun 2026",
+      "index": 100,
+      "updatedAt": "2026-06-13T16:53:36.176Z"
+    }
   ]
 }
