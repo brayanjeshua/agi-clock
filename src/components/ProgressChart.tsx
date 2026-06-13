@@ -8,23 +8,54 @@ import {
   Tooltip,
   ReferenceLine,
   ResponsiveContainer,
-  Legend,
 } from 'recharts';
 
-const historical = [
-  { date: 'Jan 2023', actual: 31 },
-  { date: 'Jun 2023', actual: 38 },
-  { date: 'Jan 2024', actual: 51 },
-  { date: 'Jun 2024', actual: 62 },
-  { date: 'Jan 2025', actual: 71 },
-  { date: 'Jun 2025', actual: 78 },
-  { date: 'Jan 2026', actual: 82 },
-  { date: 'Jun 2026', actual: 84.2, projected: 84.2 },
-  { date: 'Jan 2027', projected: 89 },
-  { date: 'Jun 2027', projected: 93 },
-  { date: 'Jan 2028', projected: 97 },
-  { date: 'Jun 2028', projected: 100 },
-];
+interface HistoryPoint {
+  date: string;
+  index: number;
+}
+
+interface Props {
+  history: HistoryPoint[];
+}
+
+// Build chart data: actual + projected (overlap at last actual point)
+function buildChartData(history: HistoryPoint[]) {
+  if (!history.length) return [];
+
+  const actual = history.map((h) => ({ date: h.date, actual: h.index }));
+
+  // Simple linear extrapolation from last 4 points
+  const recent = history.slice(-4);
+  const n = recent.length;
+  if (n < 2) return actual;
+
+  const xs = recent.map((_, i) => i);
+  const ys = recent.map((h) => h.index);
+  const xMean = xs.reduce((a, b) => a + b, 0) / n;
+  const yMean = ys.reduce((a, b) => a + b, 0) / n;
+  const b =
+    xs.reduce((acc, x, i) => acc + (x - xMean) * (ys[i] - yMean), 0) /
+    xs.reduce((acc, x) => acc + Math.pow(x - xMean, 2), 0);
+  const a = yMean - b * xMean;
+
+  // Project 5 future points (~6mo each)
+  const futureLabels = ['Jan 2027', 'Jun 2027', 'Jan 2028', 'Jun 2028', 'Jan 2029'];
+  const projected = futureLabels.map((date, i) => ({
+    date,
+    projected: Math.min(Math.round((a + b * (n - 1 + i + 1)) * 10) / 10, 100),
+  }));
+
+  // Overlap point: last actual also gets projected value
+  const last = actual[actual.length - 1];
+  const overlap = { date: last.date, actual: last.actual, projected: last.actual };
+
+  return [
+    ...actual.slice(0, -1),
+    overlap,
+    ...projected,
+  ];
+}
 
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -42,10 +73,12 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
-export default function ProgressChart() {
+export default function ProgressChart({ history }: Props) {
+  const data = buildChartData(history);
+
   return (
     <ResponsiveContainer width="100%" height={320}>
-      <LineChart data={historical} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+      <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#1a1a2e" vertical={false} />
         <XAxis
           dataKey="date"
@@ -86,7 +119,6 @@ export default function ProgressChart() {
           dot={{ fill: '#3b82f6', r: 3, strokeWidth: 0 }}
           activeDot={{ r: 5, fill: '#3b82f6' }}
           connectNulls={false}
-          name="Actual"
         />
         <Line
           type="monotone"
@@ -97,7 +129,6 @@ export default function ProgressChart() {
           dot={{ fill: '#ff6b35', r: 3, strokeWidth: 0 }}
           activeDot={{ r: 5, fill: '#ff6b35' }}
           connectNulls={false}
-          name="Projected"
         />
       </LineChart>
     </ResponsiveContainer>

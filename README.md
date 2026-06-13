@@ -1,43 +1,65 @@
-# Astro Starter Kit: Minimal
+# AGI Clock
 
-```sh
-pnpm create astro@latest -- --template minimal
+> Tracking humanity's last invention — in real time.
+
+Open-source tool that tracks AI benchmark progress toward Artificial General Intelligence. Shows a composite **AGI Index** (0–100%) based on expert-human performance thresholds across 6 key benchmarks.
+
+---
+
+## How it works
+
+1. **Daily collector** (`scripts/collect.mjs`) fetches best scores for 6 benchmarks from the [llm-stats.com API](https://llm-stats.com/developer)
+2. Calculates a weighted composite AGI Index and extrapolates an estimated arrival date
+3. Updates `src/data/live.json` and commits to the repo via GitHub Actions
+4. Cloudflare Pages auto-deploys the updated static site
+
+## Benchmarks tracked
+
+| Benchmark | Category | Expert Human | Weight |
+|-----------|----------|-------------|--------|
+| ARC-AGI v2 | Reasoning | 85% | 1.5× |
+| SWE-Bench Verified | Engineering | 92% | 1.5× |
+| FrontierMath | Mathematics | 5% | 1.0× |
+| GPQA Diamond | Science | 69.3% | 1.0× |
+| MMLU-Pro | Knowledge | 85% | 0.75× |
+| LiveCodeBench | Coding | 78% | 1.25× |
+
+**AGI definition:** AI surpasses expert-human threshold on *all* tracked benchmarks simultaneously.
+
+## Setup
+
+### Frontend
+
+```bash
+pnpm install
+pnpm dev      # dev server
+pnpm build    # production build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Data collector
 
-## 🚀 Project Structure
+1. Get an API key at [llm-stats.com/developer](https://llm-stats.com/developer)
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+2. Local test:
+```bash
+LLM_STATS_API_KEY=your_key node scripts/collect.mjs
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. GitHub Actions automation:
+   - Repo → Settings → Secrets → Actions → New secret
+   - Name: `LLM_STATS_API_KEY`, Value: your key
+   - Workflow runs daily at 02:00 UTC — also triggerable manually
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Deploy (Cloudflare Pages)
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Build command: `pnpm build`
+- Output directory: `dist`
+- Every push to `master` auto-deploys
 
-## 🧞 Commands
+## Contributing
 
-All commands are run from the root of the project, from a terminal:
+Open an issue to propose new benchmarks (include source + expert-human baseline). PRs welcome.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+## License
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+MIT — built by [Brayan Jeshua](https://brayanjeshua.com)

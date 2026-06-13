@@ -1,0 +1,52 @@
+name: Daily AGI Clock Data Collection
+
+on:
+  schedule:
+    # Every day at 02:00 UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    name: Fetch benchmark scores & update live.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run collector
+        env:
+          LLM_STATS_API_KEY: ${{ secrets.LLM_STATS_API_KEY }}
+        run: node scripts/collect.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet src/data/live.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit updated data
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "AGI Clock Bot"
+          git config user.email "bot@agi-clock.dev"
+          git add src/data/live.json
+          git commit -m "data: update benchmark scores $(date -u '+%Y-%m-%d')"
+          git push
