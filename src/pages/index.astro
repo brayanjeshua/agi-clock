@@ -1,17 +1,300 @@
 ---
+import '../styles/global.css';
+import AGIGauge from '../components/AGIGauge.tsx';
+import ProgressChart from '../components/ProgressChart.tsx';
+import { benchmarks, AGI_INDEX } from '../data/benchmarks';
 
+const trendLabel = (trend: string) => {
+  if (trend === 'exceeded') return { text: 'EXCEEDED ✓', color: '#22c55e' };
+  if (trend === 'fast') return { text: '↑ FAST', color: '#ff6b35' };
+  return { text: '↑ SLOW', color: '#f59e0b' };
+};
+
+const categoryColor = (cat: string) => {
+  const map: Record<string, string> = {
+    Reasoning: '#3b82f6',
+    Engineering: '#8b5cf6',
+    Mathematics: '#22c55e',
+    Science: '#06b6d4',
+    Knowledge: '#f59e0b',
+    Coding: '#ec4899',
+  };
+  return map[cat] || '#4a4a6a';
+};
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AGI Clock tracks AI benchmark progress toward Artificial General Intelligence. Real data. Live index. Estimated arrival date." />
+    <title>AGI Clock — Tracking Humanity's Last Invention</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="AGI Clock — Tracking Humanity's Last Invention" />
+    <meta property="og:description" content="Live AI benchmark tracker with composite AGI Index and estimated arrival date." />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="relative z-10">
+
+    <!-- Top status bar -->
+    <div class="relative z-10 border-b border-[#1a1a2e] bg-[#0d0d1a]">
+      <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+        <div class="flex items-center gap-3 font-mono text-xs text-[#4a4a6a]">
+          <span class="w-2 h-2 rounded-full bg-green-500 pulse-dot inline-block"></span>
+          <span>LIVE — Updated June 13, 2026</span>
+        </div>
+        <div class="flex items-center gap-4 font-mono text-xs text-[#4a4a6a]">
+          <span>DATA: llm-stats.com API</span>
+          <a href="https://github.com/brayanjeshua/agi-clock" target="_blank" rel="noopener"
+            class="text-[#3b82f6] hover:text-white transition-colors">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 max-w-6xl mx-auto px-4 pt-12 pb-4 fade-in-up">
+      <div class="flex items-start justify-between flex-wrap gap-4">
+        <div>
+          <div class="font-mono text-xs text-[#4a4a6a] tracking-[4px] mb-3 uppercase">
+            ◈ Scientific Instrument v0.1.0
+          </div>
+          <h1 class="font-mono text-4xl md:text-5xl font-bold text-white glow-red leading-none tracking-tight">
+            AGI<span class="text-[#ff4444]">.</span>CLOCK
+          </h1>
+          <p class="mt-3 text-[#7a7aa0] text-sm font-light tracking-wide">
+            Tracking humanity's last invention — in real time.
+          </p>
+        </div>
+        <div class="font-mono text-right">
+          <div class="text-xs text-[#4a4a6a] mb-1">COMPOSITE INDEX</div>
+          <div class="text-5xl font-bold text-[#ff4444] glow-red">{AGI_INDEX}<span class="text-2xl text-[#ff444480]">%</span></div>
+          <div class="text-xs text-[#4a4a6a] mt-1">of expert-human baseline</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero: Gauge + Stats -->
+    <section class="relative z-10 max-w-6xl mx-auto px-4 py-8 fade-in-up delay-200">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+
+        <!-- Gauge -->
+        <div class="flex flex-col items-center scanlines">
+          <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-2xl p-8 w-full max-w-md mx-auto relative">
+            <div class="absolute top-3 left-3 font-mono text-[10px] text-[#2a2a4a] tracking-widest">SYS://AGI_MONITOR_v2</div>
+            <div class="absolute top-3 right-3 font-mono text-[10px] text-[#2a2a4a]">◉ REC</div>
+            <AGIGauge value={AGI_INDEX} client:load />
+          </div>
+        </div>
+
+        <!-- Stats panel -->
+        <div class="flex flex-col gap-4">
+          <!-- ETA card -->
+          <div class="border border-[#ff444430] bg-[#ff44440a] rounded-xl p-5 critical-blink">
+            <div class="font-mono text-xs text-[#ff4444] tracking-widest mb-2">▲ ESTIMATED AGI ARRIVAL</div>
+            <div class="font-mono text-3xl font-bold text-white">2028</div>
+            <div class="font-mono text-sm text-[#7a7aa0] mt-1">± 18 months confidence interval</div>
+            <div class="mt-3 text-xs text-[#4a4a6a] leading-relaxed">
+              Based on linear extrapolation of composite benchmark improvement rate
+              (avg. +6.2 points/6mo over 36 months).
+            </div>
+          </div>
+
+          <!-- Stats grid -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">BENCHMARKS TRACKED</div>
+              <div class="font-mono text-2xl font-bold text-[#3b82f6]">6</div>
+            </div>
+            <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">ALREADY EXCEEDED</div>
+              <div class="font-mono text-2xl font-bold text-[#22c55e]">2 / 6</div>
+            </div>
+            <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">RATE OF PROGRESS</div>
+              <div class="font-mono text-2xl font-bold text-[#f59e0b]">+6.2%</div>
+              <div class="font-mono text-[10px] text-[#4a4a6a]">per 6 months</div>
+            </div>
+            <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-4">
+              <div class="font-mono text-xs text-[#4a4a6a] mb-1">DAYS TO THRESHOLD</div>
+              <div class="font-mono text-2xl font-bold text-[#ff6b35]">~730</div>
+              <div class="font-mono text-[10px] text-[#4a4a6a]">optimistic scenario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4">
+      <div class="border-t border-[#1a1a2e] my-4 flex items-center gap-3">
+        <span class="font-mono text-[10px] text-[#2a2a4a] tracking-widest whitespace-nowrap">BENCHMARK BREAKDOWN</span>
+        <div class="flex-1 border-t border-[#1a1a2e]"></div>
+      </div>
+    </div>
+
+    <!-- Benchmarks grid -->
+    <section class="relative z-10 max-w-6xl mx-auto px-4 py-4 fade-in-up delay-300">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {benchmarks.map((b, i) => {
+          const trend = trendLabel(b.trend);
+          const catColor = categoryColor(b.category);
+          const isExceeded = b.trend === 'exceeded';
+          const barColor = isExceeded ? '#22c55e' : b.progress > 90 ? '#ff4444' : b.progress > 80 ? '#ff6b35' : '#3b82f6';
+
+          return (
+            <div
+              class={`benchmark-card border ${isExceeded ? 'border-green-900/40 bg-green-950/10' : 'border-[#1a1a2e] bg-[#0d0d1a]'} rounded-xl p-5 relative overflow-hidden`}
+            >
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="font-mono text-[10px] tracking-widest px-2 py-0.5 rounded-full"
+                  style={`color: ${catColor}; background: ${catColor}18; border: 1px solid ${catColor}30`}
+                >
+                  {b.category.toUpperCase()}
+                </span>
+                <span class="font-mono text-[10px]" style={`color: ${trend.color}`}>
+                  {trend.text}
+                </span>
+              </div>
+
+              <h3 class="font-mono text-base font-bold text-white mb-1">{b.name}</h3>
+              <p class="text-xs text-[#4a4a6a] leading-relaxed mb-4">{b.description}</p>
+
+              <div class="flex justify-between text-xs font-mono mb-2">
+                <div>
+                  <div class="text-[#4a4a6a]">AI BEST</div>
+                  <div class="text-[#3b82f6] font-bold text-base">{b.aiScore}%</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-[#4a4a6a]">EXPERT HUMAN</div>
+                  <div class="text-[#7a7aa0] font-bold text-base">{b.humanExpertScore}%</div>
+                </div>
+              </div>
+
+              <div class="h-1.5 bg-[#1a1a2e] rounded-full overflow-hidden mb-2">
+                <div
+                  class="progress-fill h-full rounded-full"
+                  style={`width: ${Math.min(b.progress, 100)}%; background: ${barColor}; box-shadow: 0 0 8px ${barColor}80`}
+                >
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <span class="font-mono text-[10px]" style={`color: ${barColor}`}>
+                  {b.progress >= 100 ? '100.0% — THRESHOLD EXCEEDED' : `${b.progress}% of threshold`}
+                </span>
+              </div>
+
+              <div class="mt-3 pt-3 border-t border-[#1a1a2e]">
+                <span class="text-[10px] text-[#2a2a4a] font-mono">SOURCE: llm-stats.com API</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Timeline chart -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4">
+      <div class="border-t border-[#1a1a2e] my-8 flex items-center gap-3">
+        <span class="font-mono text-[10px] text-[#2a2a4a] tracking-widest whitespace-nowrap">HISTORICAL TRAJECTORY</span>
+        <div class="flex-1 border-t border-[#1a1a2e]"></div>
+      </div>
+    </div>
+
+    <section class="relative z-10 max-w-6xl mx-auto px-4 pb-8 fade-in-up delay-400">
+      <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-6">
+        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <div>
+            <h2 class="font-mono text-sm font-bold text-white">AGI INDEX OVER TIME</h2>
+            <p class="text-xs text-[#4a4a6a] mt-1">Jan 2023 → Projected 2028</p>
+          </div>
+          <div class="flex items-center gap-6 font-mono text-xs">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-0.5 bg-[#3b82f6]"></div>
+              <span class="text-[#4a4a6a]">ACTUAL</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-0.5 bg-[#ff6b35] opacity-70"></div>
+              <span class="text-[#4a4a6a]">PROJECTED</span>
+            </div>
+          </div>
+        </div>
+        <ProgressChart client:load />
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4">
+      <div class="border-t border-[#1a1a2e] my-4 flex items-center gap-3">
+        <span class="font-mono text-[10px] text-[#2a2a4a] tracking-widest whitespace-nowrap">METHODOLOGY</span>
+        <div class="flex-1 border-t border-[#1a1a2e]"></div>
+      </div>
+    </div>
+
+    <section class="relative z-10 max-w-6xl mx-auto px-4 py-4 pb-12 fade-in-up delay-500">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-5">
+          <div class="font-mono text-xs text-[#3b82f6] tracking-widest mb-3">01 / BENCHMARK SELECTION</div>
+          <p class="text-sm text-[#7a7aa0] leading-relaxed">
+            Six benchmarks covering orthogonal dimensions of intelligence: abstract reasoning (ARC-AGI), real-world engineering (SWE-Bench), mathematics (FrontierMath), scientific knowledge (GPQA), broad knowledge (MMLU-Pro), and coding (LiveCodeBench).
+          </p>
+        </div>
+        <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-5">
+          <div class="font-mono text-xs text-[#ff6b35] tracking-widest mb-3">02 / EXPERT HUMAN THRESHOLD</div>
+          <p class="text-sm text-[#7a7aa0] leading-relaxed">
+            Each benchmark has a published "expert human" baseline — PhD researchers, senior engineers, competitive programmers. AGI is defined as surpassing this threshold across all tracked benchmarks simultaneously.
+          </p>
+        </div>
+        <div class="border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-5">
+          <div class="font-mono text-xs text-[#22c55e] tracking-widest mb-3">03 / COMPOSITE INDEX</div>
+          <p class="text-sm text-[#7a7aa0] leading-relaxed">
+            Weighted average of per-benchmark progress (capped at 100%). Weights reflect uniqueness and replacement difficulty. Data fetched daily from the <a href="https://llm-stats.com" target="_blank" rel="noopener" class="text-[#3b82f6] hover:underline">llm-stats.com API</a>.
+          </p>
+        </div>
+      </div>
+      <div class="mt-6 border border-[#1a1a2e] bg-[#0d0d1a] rounded-xl p-5 flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <div class="font-mono text-xs text-[#4a4a6a] mb-1">OPEN SOURCE — MIT LICENSE</div>
+          <p class="text-sm text-[#7a7aa0]">Contributions, corrections, and new benchmark proposals welcome.</p>
+        </div>
+        <a
+          href="https://github.com/brayanjeshua/agi-clock"
+          target="_blank"
+          rel="noopener"
+          class="font-mono text-sm px-5 py-2.5 bg-[#1a1a2e] border border-[#3b82f6] text-[#3b82f6] rounded-lg hover:bg-[#3b82f610] transition-colors flex items-center gap-2"
+        >
+          ★ Star on GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-[#1a1a2e] bg-[#0d0d1a]">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between flex-wrap gap-3">
+        <div class="font-mono text-xs text-[#2a2a4a]">
+          AGI Clock is open source. Data from llm-stats.com API. Updated daily.
+        </div>
+        <div class="font-mono text-xs text-[#2a2a4a]">
+          Built by <a href="https://brayanjeshua.com" target="_blank" rel="noopener" class="text-[#4a4a6a] hover:text-[#3b82f6] transition-colors">Brayan Jeshua</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.progress-fill') as NodeListOf<HTMLElement>;
+        bars.forEach((bar) => {
+          const targetWidth = bar.style.width;
+          bar.style.width = '0%';
+          setTimeout(() => {
+            bar.style.width = targetWidth;
+          }, 300);
+        });
+      });
+    </script>
+
+  </body>
 </html>
