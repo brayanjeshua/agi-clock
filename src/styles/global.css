@@ -417,6 +417,73 @@ h3 {
   font-size: 30px;
 }
 
+.chart-card .section-heading p:not(.eyebrow) {
+  color: #aeb8b1;
+}
+
+.trajectory-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 16px;
+}
+
+.trajectory-panel div {
+  min-height: 104px;
+  padding: 14px;
+  border: 1px solid #303842;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.trajectory-panel span,
+.trajectory-panel small {
+  display: block;
+  color: #aeb8b1;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.trajectory-panel strong {
+  display: block;
+  margin: 8px 0;
+  color: #f4f1ea;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.02;
+}
+
+.trajectory-track {
+  position: relative;
+  height: 12px;
+  margin: 0 0 18px;
+  border: 1px solid #303842;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, transparent 24%, rgba(244, 241, 234, 0.12) 25%, transparent 26%),
+    linear-gradient(90deg, transparent 49%, rgba(244, 241, 234, 0.12) 50%, transparent 51%),
+    linear-gradient(90deg, transparent 74%, rgba(244, 241, 234, 0.12) 75%, transparent 76%),
+    #0a0e12;
+}
+
+.trajectory-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--amber));
+}
+
+.trajectory-track i {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #f4f1ea;
+  border-radius: 50%;
+  background: var(--red);
+  transform: translate(-50%, -50%);
+}
+
 .snapshot-card {
   padding: 22px;
   color: #e9eee9;
@@ -519,6 +586,7 @@ h3 {
 
   .benefit-grid,
   .dimension-grid,
+  .trajectory-panel,
   .method-steps {
     grid-template-columns: 1fr;
   }

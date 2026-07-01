@@ -17,6 +17,8 @@ const chartHistory = (data.history ?? []).map((point: any) => ({
   date: point.date,
   index: point.agiReadiness ?? point.index ?? 0,
 }));
+const trajectorySamples = chartHistory.length;
+const samplesNeeded = Math.max(30 - trajectorySamples, 0);
 const base = import.meta.env.BASE_URL;
 const assetBase = base.endsWith('/') ? base : `${base}/`;
 const siteUrl = 'https://brayanjeshua.github.io/agi-clock/';
@@ -218,6 +220,31 @@ const trendLabel = (trend: string) => {
           <div class="section-heading compact">
             <p class="eyebrow">Trajectory</p>
             <h2 id="chart-title">New formula baseline</h2>
+            <p>
+              Daily v2 history started now. The chart shows the first baseline point and waits for 30 samples before
+              estimating a trend.
+            </p>
+          </div>
+          <div class="trajectory-panel" aria-label="AGI readiness trajectory baseline">
+            <div>
+              <span>Current</span>
+              <strong>{AGI_READINESS}%</strong>
+              <small>{chartHistory.at(-1)?.date ?? updatedLabel}</small>
+            </div>
+            <div>
+              <span>Distance</span>
+              <strong>{agiDistance ?? '—'}%</strong>
+              <small>remaining</small>
+            </div>
+            <div>
+              <span>ETA</span>
+              <strong>{etaLabel}</strong>
+              <small>{samplesNeeded > 0 ? `${samplesNeeded} daily samples needed` : 'ready to estimate'}</small>
+            </div>
+          </div>
+          <div class="trajectory-track" aria-hidden="true">
+            <span style={`width: ${Math.min(AGI_READINESS, 100)}%`}></span>
+            <i style={`left: ${Math.min(AGI_READINESS, 100)}%`}></i>
           </div>
           <ProgressChart history={chartHistory} client:load />
         </div>

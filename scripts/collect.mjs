@@ -269,7 +269,11 @@ function round(value, digits = 1) {
 }
 
 function toDateLabel(date = new Date()) {
-  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function isDailyHistoryEntry(entry) {
+  return entry?.formula === 'agi-readiness-v2' && /^[A-Z][a-z]{2} \d{1,2}, \d{4}$/.test(entry.date ?? '');
 }
 
 async function apiFetch(pathname) {
@@ -340,41 +344,41 @@ function getTrend(id, score, previousBenchmarks) {
 }
 
 function estimateETA(history) {
-  if (!Array.isArray(history) || history.length < 4) {
+  if (!Array.isArray(history) || history.length < 30) {
     return {
       status: 'collecting_baseline',
       year: null,
-      marginMonths: null,
-      note: 'New AGI readiness formula needs fresh daily history before an honest trend can be estimated.',
+      marginDays: null,
+      note: 'New AGI readiness formula needs at least 30 fresh daily samples before an honest trend can be estimated.',
     };
   }
 
-  const recent = history.slice(-6);
+  const recent = history.slice(-30);
   const n = recent.length;
   const xs = recent.map((_, i) => i);
   const ys = recent.map((h) => h.agiReadiness ?? h.index).filter((v) => typeof v === 'number');
-  if (ys.length !== n) return { status: 'collecting_baseline', year: null, marginMonths: null };
+  if (ys.length !== n) return { status: 'collecting_baseline', year: null, marginDays: null };
 
   const xMean = xs.reduce((a, b) => a + b, 0) / n;
   const yMean = ys.reduce((a, b) => a + b, 0) / n;
   const denominator = xs.reduce((acc, x) => acc + (x - xMean) ** 2, 0);
   const slope = xs.reduce((acc, x, i) => acc + (x - xMean) * (ys[i] - yMean), 0) / denominator;
   if (!Number.isFinite(slope) || slope <= 0.05) {
-    return { status: 'trend_unclear', year: null, marginMonths: null };
+    return { status: 'trend_unclear', year: null, marginDays: null };
   }
 
-  const monthsFromNow = Math.round((100 - ys[ys.length - 1]) / slope);
-  if (monthsFromNow <= 0 || monthsFromNow > 240) {
-    return { status: 'trend_unclear', year: null, marginMonths: null };
+  const daysFromNow = Math.round((100 - ys[ys.length - 1]) / slope);
+  if (daysFromNow <= 0 || daysFromNow > 3650) {
+    return { status: 'trend_unclear', year: null, marginDays: null };
   }
 
   const etaDate = new Date();
-  etaDate.setMonth(etaDate.getMonth() + monthsFromNow);
+  etaDate.setDate(etaDate.getDate() + daysFromNow);
   return {
     status: 'estimated',
     year: etaDate.getFullYear(),
-    marginMonths: Math.max(1, Math.round(monthsFromNow * 0.35)),
-    monthsFromNow,
+    marginDays: Math.max(1, Math.round(daysFromNow * 0.35)),
+    daysFromNow,
   };
 }
 
@@ -428,7 +432,7 @@ async function main() {
   const agiDistance = typeof agiReadiness === 'number' ? round(100 - agiReadiness, 1) : null;
   const bottleneck = findBottleneck(dimensions);
 
-  const history = previousHistory.filter((h) => h.formula === 'agi-readiness-v2');
+  const history = previousHistory.filter(isDailyHistoryEntry);
   const lastEntry = history[history.length - 1];
   const entry = {
     date: dateLabel,
