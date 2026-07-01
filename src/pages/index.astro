@@ -17,6 +17,13 @@ const chartHistory = (data.history ?? []).map((point: any) => ({
   date: point.date,
   index: point.agiReadiness ?? point.index ?? 0,
 }));
+const legacyHistory = (data.legacyHistory ?? [])
+  .map((point: any) => ({
+    date: point.date,
+    index: point.agiReadiness ?? point.index ?? 0,
+  }))
+  .filter((point: any) => typeof point.index === 'number')
+  .slice(-6);
 const trajectorySamples = chartHistory.length;
 const samplesNeeded = Math.max(30 - trajectorySamples, 0);
 const base = import.meta.env.BASE_URL;
@@ -247,6 +254,23 @@ const trendLabel = (trend: string) => {
             <i style={`left: ${Math.min(AGI_READINESS, 100)}%`}></i>
           </div>
           <ProgressChart history={chartHistory} client:load />
+          <div class="legacy-history" aria-label="Legacy AGI index mini history">
+            <div class="legacy-head">
+              <strong>Legacy mini-history</strong>
+              <span>Old formula, context only</span>
+            </div>
+            <div class="legacy-bars">
+              {legacyHistory.map((point: any) => (
+                <div>
+                  <span>{point.date}</span>
+                  <div class="mini-bar">
+                    <i style={`width: ${Math.min(point.index, 100)}%`}></i>
+                  </div>
+                  <strong>{point.index}%</strong>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <aside class="snapshot-card" aria-label="AGI readiness bottleneck snapshot">
           <p class="eyebrow">Snapshot</p>
