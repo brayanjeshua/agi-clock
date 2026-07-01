@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://agi-clock.pages.dev',
+  site: 'https://brayanjeshua.github.io',
+  base: '/agi-clock',
   integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
