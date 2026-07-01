@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 
 interface AGIGaugeProps {
   value: number;
+  label?: string;
+  subLabel?: string;
 }
 
-export default function AGIGauge({ value }: AGIGaugeProps) {
+export default function AGIGauge({ value, label = 'AGI INDEX', subLabel = 'OF EXPERT HUMAN' }: AGIGaugeProps) {
   const [displayed, setDisplayed] = useState(0);
   const [animated, setAnimated] = useState(false);
 
@@ -130,7 +132,7 @@ export default function AGIGauge({ value }: AGIGaugeProps) {
 
           {/* Label top */}
           <text x={CX} y={CY - 42} textAnchor="middle" fill="#4a4a6a" fontSize="10" fontFamily="'Space Mono', monospace" letterSpacing="3">
-            AGI INDEX
+            {label}
           </text>
 
           {/* Main value */}
@@ -154,7 +156,7 @@ export default function AGIGauge({ value }: AGIGaugeProps) {
 
           {/* Bottom label */}
           <text x={CX} y={CY + 42} textAnchor="middle" fill="#4a4a6a" fontSize="9" fontFamily="'Space Mono', monospace" letterSpacing="2">
-            OF EXPERT HUMAN
+            {subLabel}
           </text>
 
           {/* Danger indicator */}

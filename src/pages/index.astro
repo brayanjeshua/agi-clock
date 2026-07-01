@@ -4,7 +4,19 @@ import AGIGauge from '../components/AGIGauge.tsx';
 import ProgressChart from '../components/ProgressChart.tsx';
 import liveData from '../data/live.json';
 
-const { agiIndex: AGI_INDEX, benchmarks, eta, updatedAt, history } = liveData;
+const data = liveData as any;
+const AGI_READINESS = data.agiReadiness ?? data.agiIndex ?? 0;
+const agiDistance = data.agiDistance ?? null;
+const benchmarks = data.benchmarks ?? [];
+const dimensions = data.dimensions ?? [];
+const bottleneckDimension = data.bottleneckDimension ?? null;
+const pendingBenchmarks = data.pendingBenchmarks ?? [];
+const eta = data.eta ?? {};
+const updatedAt = data.updatedAt;
+const chartHistory = (data.history ?? []).map((point: any) => ({
+  date: point.date,
+  index: point.agiReadiness ?? point.index ?? 0,
+}));
 const base = import.meta.env.BASE_URL;
 const assetBase = base.endsWith('/') ? base : `${base}/`;
 const siteUrl = 'https://brayanjeshua.github.io/agi-clock/';
@@ -13,15 +25,22 @@ const updatedLabel = new Date(updatedAt).toLocaleDateString('en-US', {
   day: 'numeric',
   year: 'numeric',
 });
-const exceededCount = benchmarks.filter((b: any) => b.trend === 'exceeded').length;
-const topBenchmarks = [...benchmarks]
-  .sort((a: any, b: any) => b.progress - a.progress)
+const lowestBenchmarks = [...benchmarks]
+  .filter((b: any) => typeof b.score === 'number')
+  .sort((a: any, b: any) => a.score - b.score)
   .slice(0, 3);
+const etaLabel =
+  eta.status === 'estimated'
+    ? `Estimated ${eta.year}`
+    : eta.status === 'trend_unclear'
+      ? 'Trend unclear'
+      : 'Collecting baseline';
 
 const trendLabel = (trend: string) => {
-  if (trend === 'exceeded') return { text: 'Threshold met', color: '#2f8f5b' };
-  if (trend === 'fast') return { text: 'Moving fast', color: '#d44a35' };
-  return { text: 'Moving slowly', color: '#b87816' };
+  if (trend === 'up') return { text: 'Improving', color: '#2f8f5b' };
+  if (trend === 'down') return { text: 'Falling', color: '#d44a35' };
+  if (trend === 'flat') return { text: 'Flat', color: '#b87816' };
+  return { text: 'New signal', color: '#007f89' };
 };
 ---
 
@@ -31,14 +50,14 @@ const trendLabel = (trend: string) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AGI Clock is an open-source benchmark tracker for measuring AI progress toward expert-human performance."
+      content="AGI Clock is an open-source benchmark tracker for estimating AI progress toward AGI across reasoning, engineering, autonomy, and tool-use signals."
     />
     <title>AGI Clock — Open-source AGI progress tracker</title>
     <link rel="icon" type="image/svg+xml" href={`${assetBase}favicon.svg`} />
     <meta property="og:title" content="AGI Clock — Open-source AGI progress tracker" />
     <meta
       property="og:description"
-      content="A clean public dashboard that tracks AI benchmark progress toward expert-human thresholds."
+      content="A clean public dashboard that estimates AGI readiness from daily LLM Stats benchmark data."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={siteUrl} />
@@ -77,9 +96,10 @@ const trendLabel = (trend: string) => {
           <p class="eyebrow">Open-source AGI progress tracker</p>
           <h1>AGI Clock</h1>
           <p class="lede">
-            A public instrument for watching frontier AI systems move toward expert-human performance across reasoning,
-            coding, science, engineering, mathematics, and knowledge benchmarks.
+            A public instrument for estimating how far frontier AI still is from AGI across reasoning, engineering,
+            autonomy, tool use, search, and reliability signals.
           </p>
+          <p class="notice">Benchmark proxy only. This does not claim AGI has been reached.</p>
           <div class="hero-actions">
             <a class="button primary" href="#live-index">View live index</a>
             <a class="button secondary" href="https://github.com/brayanjeshua/agi-clock" target="_blank" rel="noopener">
@@ -88,32 +108,29 @@ const trendLabel = (trend: string) => {
           </div>
           <dl class="hero-metrics" aria-label="AGI Clock summary">
             <div>
-              <dt>AGI Index</dt>
-              <dd>{AGI_INDEX}%</dd>
+              <dt>AGI Readiness</dt>
+              <dd>{AGI_READINESS}%</dd>
             </div>
             <div>
-              <dt>Benchmarks met</dt>
-              <dd>{exceededCount}/{benchmarks.length}</dd>
+              <dt>Distance</dt>
+              <dd>{agiDistance ?? '—'}%</dd>
             </div>
             <div>
-              <dt>Updated</dt>
-              <dd>{updatedLabel}</dd>
+              <dt>Bottleneck</dt>
+              <dd>{bottleneckDimension?.name ?? 'Collecting'}</dd>
             </div>
           </dl>
         </div>
 
         <div class="instrument-panel" id="live-index" aria-label="Live AGI index preview">
           <div class="panel-bar">
-            <span>Live composite index</span>
+            <span>Live readiness proxy</span>
             <span class="status-dot">Updated daily</span>
           </div>
-          <AGIGauge value={AGI_INDEX} client:load />
+          <AGIGauge value={AGI_READINESS} label="AGI READINESS" subLabel="MULTI-DIMENSION" client:load />
           <div class="panel-foot">
-            {
-              AGI_INDEX >= 100
-                ? 'All tracked expert-human thresholds are currently met.'
-                : `Estimated AGI arrival: ${eta.year ?? 'not enough data'}`
-            }
+            <span>{etaLabel}</span>
+            <span>Updated {updatedLabel}</span>
           </div>
         </div>
       </section>
@@ -121,18 +138,18 @@ const trendLabel = (trend: string) => {
       <section class="section split-section" aria-labelledby="why-title">
         <div>
           <p class="eyebrow">Why it exists</p>
-          <h2 id="why-title">A simple scoreboard for a noisy question.</h2>
+          <h2 id="why-title">A stricter scoreboard for a noisy question.</h2>
         </div>
         <div class="benefit-grid">
           <article>
             <span>01</span>
-            <h3>Benchmark grounded</h3>
-            <p>Uses explicit expert-human thresholds instead of vibes, press cycles, or model launch hype.</p>
+            <h3>No single benchmark decides it</h3>
+            <p>Combines 24 daily LLM Stats signals instead of letting one saturated leaderboard declare victory.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Broad by design</h3>
-            <p>Tracks multiple capability families so a single saturated leaderboard does not dominate the signal.</p>
+            <h3>Autonomy matters</h3>
+            <p>Weights agentic work, computer use, planning, tools, and search because AGI must do more than answer tests.</p>
           </article>
           <article>
             <span>03</span>
@@ -145,11 +162,26 @@ const trendLabel = (trend: string) => {
       <section class="section" id="benchmarks" aria-labelledby="benchmarks-title">
         <div class="section-heading">
           <p class="eyebrow">Current signal</p>
-          <h2 id="benchmarks-title">Six benchmarks, one capped composite index.</h2>
+          <h2 id="benchmarks-title">{benchmarks.length} benchmarks, four dimensions, one readiness proxy.</h2>
           <p>
-            Each benchmark reports the best known AI score against a published expert-human baseline. Progress is capped
-            at 100% before weighting.
+            Each benchmark reports the best available frontier score from LLM Stats. The index groups those raw scores
+            into capability dimensions and keeps the ETA hidden until the new formula has enough daily history.
           </p>
+        </div>
+
+        <div class="dimension-grid" aria-label="AGI readiness dimensions">
+          {dimensions.map((dimension: any) => (
+            <article>
+              <div class="score-line">
+                <strong>{dimension.name}</strong>
+                <span>{dimension.score ?? '—'}%</span>
+              </div>
+              <div class="meter" aria-label={`${dimension.name} readiness ${dimension.score ?? 0}%`}>
+                <span style={`width: ${Math.min(dimension.score ?? 0, 100)}%`}></span>
+              </div>
+              <p>{dimension.description}</p>
+            </article>
+          ))}
         </div>
 
         <div class="benchmark-list">
@@ -164,14 +196,14 @@ const trendLabel = (trend: string) => {
                 </div>
                 <div class="benchmark-score">
                   <div class="score-line">
-                    <span>AI {b.aiScore}%</span>
-                    <span>Human {b.humanExpertScore}%</span>
+                    <span>Best {b.score}%</span>
+                    <span>{b.modelName ?? 'Unknown model'}</span>
                   </div>
-                  <div class="meter" aria-label={`${b.name} progress ${b.progress}%`}>
-                    <span style={`width: ${Math.min(b.progress, 100)}%`}></span>
+                  <div class="meter" aria-label={`${b.name} frontier score ${b.score}%`}>
+                    <span style={`width: ${Math.min(b.score ?? 0, 100)}%`}></span>
                   </div>
                   <div class="score-line small">
-                    <span>{b.progress}% of threshold</span>
+                    <span>{b.source}</span>
                     <span style={`color: ${trend.color}`}>{trend.text}</span>
                   </div>
                 </div>
@@ -185,18 +217,18 @@ const trendLabel = (trend: string) => {
         <div class="chart-card">
           <div class="section-heading compact">
             <p class="eyebrow">Trajectory</p>
-            <h2 id="chart-title">Historical index and projection</h2>
+            <h2 id="chart-title">New formula baseline</h2>
           </div>
-          <ProgressChart history={history} client:load />
+          <ProgressChart history={chartHistory} client:load />
         </div>
-        <aside class="snapshot-card" aria-label="Leading benchmark snapshot">
+        <aside class="snapshot-card" aria-label="AGI readiness bottleneck snapshot">
           <p class="eyebrow">Snapshot</p>
-          <h2>What is already over the line?</h2>
+          <h2>Bottleneck: {bottleneckDimension?.name ?? 'Collecting'}</h2>
           <div class="snapshot-list">
-            {topBenchmarks.map((b: any) => (
+            {lowestBenchmarks.map((b: any) => (
               <div>
                 <strong>{b.name}</strong>
-                <span>{b.category} · {b.progress}%</span>
+                <span>{b.category} · {b.score}% · {b.modelName ?? 'Unknown model'}</span>
               </div>
             ))}
           </div>
@@ -208,23 +240,26 @@ const trendLabel = (trend: string) => {
           <p class="eyebrow">Method</p>
           <h2 id="method-title">Transparent enough to disagree with.</h2>
           <p>
-            AGI Clock defines the threshold narrowly: expert-human performance on all tracked benchmarks at the same
-            time. It is not a claim of consciousness, agency, or economic replacement.
+            AGI Clock estimates distance to AGI with a frontier benchmark basket. It is not a claim of consciousness,
+            economic replacement, or that a single model has passed every task.
           </p>
         </div>
         <div class="method-steps">
           <div>
             <strong>Collect</strong>
-            <span>Daily benchmark data from the llm-stats.com API.</span>
+            <span>Daily frontier benchmark data from the llm-stats.com API.</span>
           </div>
           <div>
             <strong>Normalize</strong>
-            <span>Convert each score to progress against its expert-human threshold.</span>
+            <span>Group raw scores into reasoning, engineering, autonomy, and tool/search dimensions.</span>
           </div>
           <div>
             <strong>Publish</strong>
-            <span>Commit static JSON and rebuild a fast public site.</span>
+            <span>Show readiness, distance, bottleneck, and hold ETA until enough v2 history exists.</span>
           </div>
+        </div>
+        <div class="pending-note">
+          Pending daily sources: {pendingBenchmarks.map((b: any) => b.name).join(', ')}.
         </div>
       </section>
 

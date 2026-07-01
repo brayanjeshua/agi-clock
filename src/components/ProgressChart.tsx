@@ -25,7 +25,7 @@ function buildChartData(history: HistoryPoint[]) {
 
   const actual = history.map((h) => ({ date: h.date, actual: h.index }));
 
-  // Simple linear extrapolation from last 4 points
+  // Simple linear extrapolation from last 4 points.
   const recent = history.slice(-4);
   const n = recent.length;
   if (n < 2) return actual;
@@ -39,7 +39,7 @@ function buildChartData(history: HistoryPoint[]) {
     xs.reduce((acc, x) => acc + Math.pow(x - xMean, 2), 0);
   const a = yMean - b * xMean;
 
-  // Project 5 future points (~6mo each)
+  // Project only after the v2 formula has enough fresh history.
   const futureLabels = ['Jan 2027', 'Jun 2027', 'Jan 2028', 'Jun 2028', 'Jan 2029'];
   const projected = futureLabels.map((date, i) => ({
     date,
@@ -104,7 +104,7 @@ export default function ProgressChart({ history }: Props) {
           strokeDasharray="6 3"
           strokeWidth={1.5}
           label={{
-            value: 'AGI THRESHOLD',
+            value: 'READINESS TARGET',
             fill: '#ff4444',
             fontSize: 9,
             fontFamily: 'Space Mono, monospace',

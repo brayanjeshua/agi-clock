@@ -159,6 +159,19 @@ h3 {
   line-height: 1.32;
 }
 
+.notice {
+  display: inline-flex;
+  max-width: 640px;
+  margin: 4px 0 0;
+  padding: 10px 12px;
+  color: #303836;
+  border-left: 4px solid var(--red);
+  background: rgba(232, 226, 215, 0.76);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +325,28 @@ h3 {
   margin-bottom: 18px;
 }
 
+.dimension-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.dimension-grid article {
+  min-height: 190px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(244, 241, 234, 0.82);
+}
+
+.dimension-grid p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.48;
+}
+
 .benchmark-list {
   display: grid;
   gap: 10px;
@@ -426,6 +461,18 @@ h3 {
   font-size: 22px;
 }
 
+.pending-note {
+  margin-top: 14px;
+  padding: 14px 16px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(244, 241, 234, 0.74);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .cta-section {
   display: flex;
   align-items: center;
@@ -471,6 +518,7 @@ h3 {
   }
 
   .benefit-grid,
+  .dimension-grid,
   .method-steps {
     grid-template-columns: 1fr;
   }
