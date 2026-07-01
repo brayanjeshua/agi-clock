@@ -1,10 +1,9 @@
 {
   "agiIndex": 100,
-  "updatedAt": "2026-06-30T03:16:29.244Z",
+  "updatedAt": "2026-07-01T03:18:04.538Z",
   "eta": {
-    "year": 2026,
-    "marginMonths": 1,
-    "monthsFromNow": 2
+    "year": null,
+    "marginMonths": null
   },
   "benchmarks": [
     {
@@ -107,6 +106,11 @@
       "date": "Jun 2026",
       "index": 100,
       "updatedAt": "2026-06-30T03:16:29.244Z"
+    },
+    {
+      "date": "Jul 2026",
+      "index": 100,
+      "updatedAt": "2026-07-01T03:18:04.538Z"
     }
   ]
 }
