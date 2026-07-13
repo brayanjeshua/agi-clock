@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-12T05:32:38.207Z",
-  "agiReadiness": 72.9,
-  "agiDistance": 27.1,
+  "updatedAt": "2026-07-13T05:41:49.006Z",
+  "agiReadiness": 75.3,
+  "agiDistance": 24.7,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -22,8 +22,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 76.3,
-      "distance": 23.7,
+      "score": 83.4,
+      "distance": 16.6,
       "benchmarkCount": 5
     },
     {
@@ -31,8 +31,8 @@
       "name": "Coding + Engineering",
       "weight": 0.25,
       "description": "Software engineering, competitive coding, terminal work, and multi-step code tasks.",
-      "score": 80.2,
-      "distance": 19.8,
+      "score": 81.1,
+      "distance": 18.9,
       "benchmarkCount": 5
     },
     {
@@ -49,8 +49,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 81.5,
-      "distance": 18.5,
+      "score": 81.6,
+      "distance": 18.4,
       "benchmarkCount": 8
     }
   ],
@@ -93,9 +93,9 @@
       "dimension": "reasoningKnowledge",
       "score": 94.6,
       "scoreRaw": 0.946,
-      "modelName": "Claude Mythos Preview",
-      "modelId": "claude-mythos-preview",
-      "totalModels": 226,
+      "modelName": "GPT-5.6 Sol",
+      "modelId": "gpt-5.6-sol",
+      "totalModels": 230,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -121,12 +121,12 @@
       "name": "FrontierMath",
       "category": "Mathematics",
       "dimension": "reasoningKnowledge",
-      "score": 47.6,
-      "scoreRaw": 0.476,
-      "modelName": "GPT-5.4",
-      "modelId": "gpt-5.4",
-      "totalModels": 14,
-      "trend": "flat",
+      "score": 83,
+      "scoreRaw": 0.83,
+      "modelName": "GPT-5.6 Sol",
+      "modelId": "gpt-5.6-sol",
+      "totalModels": 17,
+      "trend": "up",
       "source": "llm-stats:frontiermath",
       "description": "Advanced unpublished mathematical problems authored and reviewed by expert mathematicians."
     },
@@ -155,7 +155,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 35,
+      "totalModels": 39,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -196,12 +196,12 @@
       "name": "Terminal-Bench 2.1",
       "category": "Terminal Work",
       "dimension": "codingEngineering",
-      "score": 84.3,
-      "scoreRaw": 0.843,
-      "modelName": "Claude Fable 5",
-      "modelId": "claude-fable-5",
-      "totalModels": 6,
-      "trend": "flat",
+      "score": 88.8,
+      "scoreRaw": 0.888,
+      "modelName": "GPT-5.6 Sol",
+      "modelId": "gpt-5.6-sol",
+      "totalModels": 10,
+      "trend": "up",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -365,7 +365,7 @@
       "scoreRaw": 0.599,
       "modelName": "Claude Opus 4.8",
       "modelId": "claude-opus-4-8",
-      "totalModels": 24,
+      "totalModels": 27,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -376,12 +376,12 @@
       "name": "BrowseComp",
       "category": "Search",
       "dimension": "toolSearchReliability",
-      "score": 90.1,
-      "scoreRaw": 0.901,
-      "modelName": "GPT-5.5 Pro",
-      "modelId": "gpt-5.5-pro",
-      "totalModels": 52,
-      "trend": "flat",
+      "score": 90.4,
+      "scoreRaw": 0.904,
+      "modelName": "GPT-5.6 Sol",
+      "modelId": "gpt-5.6-sol",
+      "totalModels": 55,
+      "trend": "up",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -533,6 +533,14 @@
       "agiDistance": 27.1,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-12T05:32:38.207Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 13, 2026",
+      "agiReadiness": 75.3,
+      "agiDistance": 24.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-13T05:41:49.006Z",
       "formula": "agi-readiness-v2"
     }
   ],
