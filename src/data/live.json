@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-13T05:41:49.006Z",
+  "updatedAt": "2026-07-14T04:54:52.502Z",
   "agiReadiness": 75.3,
   "agiDistance": 24.7,
   "bottleneckDimension": {
@@ -126,7 +126,7 @@
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
       "totalModels": 17,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:frontiermath",
       "description": "Advanced unpublished mathematical problems authored and reviewed by expert mathematicians."
     },
@@ -201,7 +201,7 @@
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
       "totalModels": 10,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -381,7 +381,7 @@
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
       "totalModels": 55,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -541,6 +541,14 @@
       "agiDistance": 24.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-13T05:41:49.006Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 14, 2026",
+      "agiReadiness": 75.3,
+      "agiDistance": 24.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-14T04:54:52.502Z",
       "formula": "agi-readiness-v2"
     }
   ],
