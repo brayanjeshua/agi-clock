@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-15T04:55:11.680Z",
-  "agiReadiness": 75.3,
-  "agiDistance": 24.7,
+  "updatedAt": "2026-07-16T05:14:47.391Z",
+  "agiReadiness": 75.6,
+  "agiDistance": 24.4,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -22,8 +22,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 83.4,
-      "distance": 16.6,
+      "score": 84.6,
+      "distance": 15.4,
       "benchmarkCount": 5
     },
     {
@@ -95,7 +95,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 230,
+      "totalModels": 231,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -121,12 +121,12 @@
       "name": "FrontierMath",
       "category": "Mathematics",
       "dimension": "reasoningKnowledge",
-      "score": 83,
-      "scoreRaw": 0.83,
+      "score": 89,
+      "scoreRaw": 0.89,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
       "totalModels": 17,
-      "trend": "flat",
+      "trend": "up",
       "source": "llm-stats:frontiermath",
       "description": "Advanced unpublished mathematical problems authored and reviewed by expert mathematicians."
     },
@@ -140,7 +140,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 103,
+      "totalModels": 104,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -155,7 +155,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 39,
+      "totalModels": 40,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -200,7 +200,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 10,
+      "totalModels": 11,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -230,7 +230,7 @@
       "scoreRaw": 0.338,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 5,
+      "totalModels": 6,
       "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
@@ -350,7 +350,7 @@
       "scoreRaw": 0.838,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 27,
+      "totalModels": 28,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -365,7 +365,7 @@
       "scoreRaw": 0.599,
       "modelName": "Claude Opus 4.8",
       "modelId": "claude-opus-4-8",
-      "totalModels": 27,
+      "totalModels": 28,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -380,7 +380,7 @@
       "scoreRaw": 0.904,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 55,
+      "totalModels": 56,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -395,7 +395,7 @@
       "scoreRaw": 0.808,
       "modelName": "Kimi K2.6",
       "modelId": "kimi-k2.6",
-      "totalModels": 8,
+      "totalModels": 9,
       "trend": "flat",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
@@ -410,7 +410,7 @@
       "scoreRaw": 0.931,
       "modelName": "Claude Opus 4.8",
       "modelId": "claude-opus-4-8",
-      "totalModels": 6,
+      "totalModels": 7,
       "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
@@ -557,6 +557,14 @@
       "agiDistance": 24.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-15T04:55:11.680Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 16, 2026",
+      "agiReadiness": 75.6,
+      "agiDistance": 24.4,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-16T05:14:47.391Z",
       "formula": "agi-readiness-v2"
     }
   ],
