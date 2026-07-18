@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-17T05:17:41.505Z",
-  "agiReadiness": 76.1,
-  "agiDistance": 23.9,
+  "updatedAt": "2026-07-18T04:52:21.045Z",
+  "agiReadiness": 76.3,
+  "agiDistance": 23.7,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -49,8 +49,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 83.6,
-      "distance": 16.4,
+      "score": 84.4,
+      "distance": 15.6,
       "benchmarkCount": 8
     }
   ],
@@ -80,7 +80,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Mythos Preview",
       "modelId": "claude-mythos-preview",
-      "totalModels": 89,
+      "totalModels": 90,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -155,7 +155,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 40,
+      "totalModels": 41,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -200,7 +200,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 12,
+      "totalModels": 13,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -231,7 +231,7 @@
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
       "totalModels": 7,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -290,7 +290,7 @@
       "scoreRaw": 0.5786,
       "modelName": "Gemini 3.5 Flash",
       "modelId": "gemini-3.5-flash",
-      "totalModels": 25,
+      "totalModels": 26,
       "trend": "flat",
       "source": "llm-stats:finance-agent-v2",
       "description": "Agentic financial analysis workflows over realistic business tasks."
@@ -346,11 +346,11 @@
       "name": "MCP Atlas",
       "category": "Tool Use",
       "dimension": "toolSearchReliability",
-      "score": 84.2,
-      "scoreRaw": 0.842,
-      "modelName": "Kimi K3",
-      "modelId": "kimi-k3",
-      "totalModels": 29,
+      "score": 88.1,
+      "scoreRaw": 0.881,
+      "modelName": "Muse Spark 1.1",
+      "modelId": "muse-spark-1.1",
+      "totalModels": 30,
       "trend": "up",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -361,11 +361,11 @@
       "name": "Toolathlon",
       "category": "Tool Use",
       "dimension": "toolSearchReliability",
-      "score": 73.2,
-      "scoreRaw": 0.732,
-      "modelName": "Kimi K3",
-      "modelId": "kimi-k3",
-      "totalModels": 29,
+      "score": 75.6,
+      "scoreRaw": 0.756,
+      "modelName": "Muse Spark 1.1",
+      "modelId": "muse-spark-1.1",
+      "totalModels": 30,
       "trend": "up",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -381,7 +381,7 @@
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
       "totalModels": 57,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -411,7 +411,7 @@
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
       "totalModels": 8,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
     }
@@ -573,6 +573,14 @@
       "agiDistance": 23.9,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-17T05:17:41.505Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 18, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-18T04:52:21.045Z",
       "formula": "agi-readiness-v2"
     }
   ],
