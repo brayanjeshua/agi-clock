@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-21T05:24:55.942Z",
+  "updatedAt": "2026-07-22T05:23:18.231Z",
   "agiReadiness": 76.3,
   "agiDistance": 23.7,
   "bottleneckDimension": {
@@ -155,7 +155,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 41,
+      "totalModels": 43,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -200,7 +200,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 13,
+      "totalModels": 15,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -605,6 +605,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-21T05:24:55.942Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 22, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-22T05:23:18.231Z",
       "formula": "agi-readiness-v2"
     }
   ],
