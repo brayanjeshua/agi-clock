@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-24T05:24:08.620Z",
+  "updatedAt": "2026-07-25T05:18:06.369Z",
   "agiReadiness": 76.3,
   "agiDistance": 23.7,
   "bottleneckDimension": {
@@ -78,9 +78,9 @@
       "dimension": "reasoningKnowledge",
       "score": 64.7,
       "scoreRaw": 0.647,
-      "modelName": "Claude Mythos Preview",
-      "modelId": "claude-mythos-preview",
-      "totalModels": 90,
+      "modelName": "Claude Opus 5",
+      "modelId": "claude-opus-5",
+      "totalModels": 91,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -380,7 +380,7 @@
       "scoreRaw": 0.912,
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
-      "totalModels": 57,
+      "totalModels": 58,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -629,6 +629,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-24T05:24:08.620Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 25, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-25T05:18:06.369Z",
       "formula": "agi-readiness-v2"
     }
   ],
