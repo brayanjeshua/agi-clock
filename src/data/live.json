@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-07-29T05:26:13.997Z",
+  "updatedAt": "2026-07-30T05:12:53.122Z",
   "agiReadiness": 76.3,
   "agiDistance": 23.7,
   "bottleneckDimension": {
@@ -11,10 +11,10 @@
     "distance": 40.2
   },
   "eta": {
-    "status": "collecting_baseline",
-    "year": null,
-    "marginDays": null,
-    "note": "New AGI readiness formula needs at least 30 fresh daily samples before an honest trend can be estimated."
+    "status": "estimated",
+    "year": 2026,
+    "marginDays": 50,
+    "daysFromNow": 144
   },
   "dimensions": [
     {
@@ -669,6 +669,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-07-29T05:26:13.997Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Jul 30, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-07-30T05:12:53.122Z",
       "formula": "agi-readiness-v2"
     }
   ],
