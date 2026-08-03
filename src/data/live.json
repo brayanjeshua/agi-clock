@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-02T05:31:37.029Z",
+  "updatedAt": "2026-08-03T05:46:50.747Z",
   "agiReadiness": 76.3,
   "agiDistance": 23.7,
   "bottleneckDimension": {
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 55,
-    "daysFromNow": 158
+    "marginDays": 58,
+    "daysFromNow": 167
   },
   "dimensions": [
     {
@@ -200,7 +200,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 15,
+      "totalModels": 16,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -365,7 +365,7 @@
       "scoreRaw": 0.756,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 30,
+      "totalModels": 31,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -701,6 +701,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-02T05:31:37.029Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 3, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-03T05:46:50.747Z",
       "formula": "agi-readiness-v2"
     }
   ],
