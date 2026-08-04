@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-03T05:46:50.747Z",
+  "updatedAt": "2026-08-04T05:18:43.206Z",
   "agiReadiness": 76.3,
   "agiDistance": 23.7,
   "bottleneckDimension": {
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 58,
-    "daysFromNow": 167
+    "marginDays": 63,
+    "daysFromNow": 179
   },
   "dimensions": [
     {
@@ -80,7 +80,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Opus 5",
       "modelId": "claude-opus-5",
-      "totalModels": 91,
+      "totalModels": 92,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -95,7 +95,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 232,
+      "totalModels": 233,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -155,7 +155,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 43,
+      "totalModels": 44,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -200,7 +200,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 16,
+      "totalModels": 17,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -709,6 +709,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-03T05:46:50.747Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 4, 2026",
+      "agiReadiness": 76.3,
+      "agiDistance": 23.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-04T05:18:43.206Z",
       "formula": "agi-readiness-v2"
     }
   ],
