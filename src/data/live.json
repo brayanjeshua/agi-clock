@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-12T04:10:45.974Z",
-  "agiReadiness": 76.3,
-  "agiDistance": 23.7,
+  "updatedAt": "2026-08-13T04:15:28.659Z",
+  "agiReadiness": 77.3,
+  "agiDistance": 22.7,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
-    "score": 59.8,
-    "distance": 40.2
+    "score": 63.1,
+    "distance": 36.9
   },
   "eta": {
     "status": "trend_unclear",
@@ -21,8 +21,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 84.6,
-      "distance": 15.4,
+      "score": 84.7,
+      "distance": 15.3,
       "benchmarkCount": 5
     },
     {
@@ -39,8 +39,8 @@
       "name": "Agents + Autonomy",
       "weight": 0.3,
       "description": "Computer use, long-horizon professional workflows, planning, and applied office/finance tasks.",
-      "score": 59.8,
-      "distance": 40.2,
+      "score": 63.1,
+      "distance": 36.9,
       "benchmarkCount": 6
     },
     {
@@ -64,7 +64,7 @@
       "scoreRaw": 0.85,
       "modelName": "GPT-5.5",
       "modelId": "gpt-5.5",
-      "totalModels": 16,
+      "totalModels": 17,
       "trend": "flat",
       "source": "llm-stats:arc-agi-v2",
       "description": "Abstract grid transformation tasks for fluid reasoning and novel problem solving."
@@ -79,7 +79,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Opus 5",
       "modelId": "claude-opus-5",
-      "totalModels": 94,
+      "totalModels": 96,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 235,
+      "totalModels": 238,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -105,12 +105,12 @@
       "name": "MMLU-Pro",
       "category": "Knowledge",
       "dimension": "reasoningKnowledge",
-      "score": 89.6,
-      "scoreRaw": 0.896,
-      "modelName": "Qwen3.7 Max",
-      "modelId": "qwen3.7-max",
-      "totalModels": 130,
-      "trend": "flat",
+      "score": 90.3,
+      "scoreRaw": 0.9033,
+      "modelName": "Sakana Namazu",
+      "modelId": "sakana-namazu",
+      "totalModels": 133,
+      "trend": "up",
       "source": "llm-stats:mmlu-pro",
       "description": "Harder professional knowledge benchmark across academic and applied domains."
     },
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 106,
+      "totalModels": 109,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 46,
+      "totalModels": 47,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -169,7 +169,7 @@
       "scoreRaw": 0.916,
       "modelName": "Qwen3.7 Max",
       "modelId": "qwen3.7-max",
-      "totalModels": 53,
+      "totalModels": 55,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 19,
+      "totalModels": 22,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -225,12 +225,12 @@
       "name": "APEX-Agents",
       "category": "Long-Horizon Agents",
       "dimension": "agentsAutonomy",
-      "score": 37.6,
-      "scoreRaw": 0.376,
-      "modelName": "Kimi K3",
-      "modelId": "kimi-k3",
-      "totalModels": 7,
-      "trend": "flat",
+      "score": 57.5,
+      "scoreRaw": 0.575,
+      "modelName": "Grok 4.6",
+      "modelId": "grok-4.6",
+      "totalModels": 8,
+      "trend": "up",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -349,7 +349,7 @@
       "scoreRaw": 0.881,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 32,
+      "totalModels": 33,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -364,7 +364,7 @@
       "scoreRaw": 0.756,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 32,
+      "totalModels": 33,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.912,
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
-      "totalModels": 59,
+      "totalModels": 62,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -780,6 +780,14 @@
       "agiDistance": 23.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-12T04:10:45.974Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 13, 2026",
+      "agiReadiness": 77.3,
+      "agiDistance": 22.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-13T04:15:28.659Z",
       "formula": "agi-readiness-v2"
     }
   ],
