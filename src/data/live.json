@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-13T04:15:28.659Z",
+  "updatedAt": "2026-08-14T04:12:05.576Z",
   "agiReadiness": 77.3,
   "agiDistance": 22.7,
   "bottleneckDimension": {
@@ -48,8 +48,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 84.4,
-      "distance": 15.6,
+      "score": 84.5,
+      "distance": 15.5,
       "benchmarkCount": 8
     }
   ],
@@ -79,7 +79,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Opus 5",
       "modelId": "claude-opus-5",
-      "totalModels": 96,
+      "totalModels": 97,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -109,8 +109,8 @@
       "scoreRaw": 0.9033,
       "modelName": "Sakana Namazu",
       "modelId": "sakana-namazu",
-      "totalModels": 133,
-      "trend": "up",
+      "totalModels": 134,
+      "trend": "flat",
       "source": "llm-stats:mmlu-pro",
       "description": "Harder professional knowledge benchmark across academic and applied domains."
     },
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 109,
+      "totalModels": 110,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 22,
+      "totalModels": 25,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -230,7 +230,7 @@
       "modelName": "Grok 4.6",
       "modelId": "grok-4.6",
       "totalModels": 8,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -364,7 +364,7 @@
       "scoreRaw": 0.756,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 33,
+      "totalModels": 35,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -390,12 +390,12 @@
       "name": "WideSearch",
       "category": "Search",
       "dimension": "toolSearchReliability",
-      "score": 80.8,
-      "scoreRaw": 0.808,
-      "modelName": "Kimi K2.6",
-      "modelId": "kimi-k2.6",
-      "totalModels": 9,
-      "trend": "flat",
+      "score": 81.9,
+      "scoreRaw": 0.819,
+      "modelName": "Qwen3.8 Max",
+      "modelId": "qwen3.8-max",
+      "totalModels": 10,
+      "trend": "up",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
     },
@@ -788,6 +788,14 @@
       "agiDistance": 22.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-13T04:15:28.659Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 14, 2026",
+      "agiReadiness": 77.3,
+      "agiDistance": 22.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-14T04:12:05.576Z",
       "formula": "agi-readiness-v2"
     }
   ],
