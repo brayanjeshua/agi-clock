@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-14T04:12:05.576Z",
+  "updatedAt": "2026-08-15T02:54:28.353Z",
   "agiReadiness": 77.3,
   "agiDistance": 22.7,
   "bottleneckDimension": {
@@ -79,7 +79,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Opus 5",
       "modelId": "claude-opus-5",
-      "totalModels": 97,
+      "totalModels": 99,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 238,
+      "totalModels": 239,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 110,
+      "totalModels": 111,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 47,
+      "totalModels": 50,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -169,7 +169,7 @@
       "scoreRaw": 0.916,
       "modelName": "Qwen3.7 Max",
       "modelId": "qwen3.7-max",
-      "totalModels": 55,
+      "totalModels": 56,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 25,
+      "totalModels": 28,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -364,7 +364,7 @@
       "scoreRaw": 0.756,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 35,
+      "totalModels": 37,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -395,7 +395,7 @@
       "modelName": "Qwen3.8 Max",
       "modelId": "qwen3.8-max",
       "totalModels": 10,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
     },
@@ -796,6 +796,14 @@
       "agiDistance": 22.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-14T04:12:05.576Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 15, 2026",
+      "agiReadiness": 77.3,
+      "agiDistance": 22.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-15T02:54:28.353Z",
       "formula": "agi-readiness-v2"
     }
   ],
