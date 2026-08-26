@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-25T03:01:58.029Z",
+  "updatedAt": "2026-08-26T03:09:12.962Z",
   "agiReadiness": 77.3,
   "agiDistance": 22.7,
   "bottleneckDimension": {
@@ -94,7 +94,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 239,
+      "totalModels": 240,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -109,7 +109,7 @@
       "scoreRaw": 0.9033,
       "modelName": "Sakana Namazu",
       "modelId": "sakana-namazu",
-      "totalModels": 134,
+      "totalModels": 135,
       "trend": "flat",
       "source": "llm-stats:mmlu-pro",
       "description": "Harder professional knowledge benchmark across academic and applied domains."
@@ -169,7 +169,7 @@
       "scoreRaw": 0.916,
       "modelName": "Qwen3.7 Max",
       "modelId": "qwen3.7-max",
-      "totalModels": 56,
+      "totalModels": 57,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -884,6 +884,14 @@
       "agiDistance": 22.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-25T03:01:58.029Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 26, 2026",
+      "agiReadiness": 77.3,
+      "agiDistance": 22.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-26T03:09:12.962Z",
       "formula": "agi-readiness-v2"
     }
   ],
