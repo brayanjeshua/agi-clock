@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-27T12:37:21.208Z",
+  "updatedAt": "2026-08-28T14:09:45.040Z",
   "agiReadiness": 77.4,
   "agiDistance": 22.6,
   "bottleneckDimension": {
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 156,
-    "daysFromNow": 446
+    "marginDays": 155,
+    "daysFromNow": 442
   },
   "dimensions": [
     {
@@ -171,7 +171,7 @@
       "modelName": "Qwen3.8-Flash-Next",
       "modelId": "qwen3.8-flash-next",
       "totalModels": 58,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
     },
@@ -366,7 +366,7 @@
       "modelName": "GLM-5.3-Flash",
       "modelId": "glm-5.3-flash",
       "totalModels": 39,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
     },
@@ -901,6 +901,14 @@
       "agiDistance": 22.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-27T12:37:21.208Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 28, 2026",
+      "agiReadiness": 77.4,
+      "agiDistance": 22.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-28T14:09:45.040Z",
       "formula": "agi-readiness-v2"
     }
   ],
