@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-08-30T08:04:58.229Z",
+  "updatedAt": "2026-08-31T08:23:41.332Z",
   "agiReadiness": 77.4,
   "agiDistance": 22.6,
   "bottleneckDimension": {
@@ -11,10 +11,9 @@
     "distance": 36.9
   },
   "eta": {
-    "status": "estimated",
-    "year": 2027,
-    "marginDays": 157,
-    "daysFromNow": 449
+    "status": "trend_unclear",
+    "year": null,
+    "marginDays": null
   },
   "dimensions": [
     {
@@ -49,8 +48,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 84.9,
-      "distance": 15.1,
+      "score": 85.1,
+      "distance": 14.9,
       "benchmarkCount": 8
     }
   ],
@@ -80,7 +79,7 @@
       "scoreRaw": 0.647,
       "modelName": "Claude Opus 5",
       "modelId": "claude-opus-5",
-      "totalModels": 101,
+      "totalModels": 102,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -95,7 +94,7 @@
       "scoreRaw": 0.946,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 241,
+      "totalModels": 246,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -110,7 +109,7 @@
       "scoreRaw": 0.9033,
       "modelName": "Sakana Namazu",
       "modelId": "sakana-namazu",
-      "totalModels": 135,
+      "totalModels": 138,
       "trend": "flat",
       "source": "llm-stats:mmlu-pro",
       "description": "Harder professional knowledge benchmark across academic and applied domains."
@@ -140,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 111,
+      "totalModels": 113,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -155,7 +154,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 51,
+      "totalModels": 55,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -168,9 +167,9 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8-Flash-Next",
-      "modelId": "qwen3.8-flash-next",
-      "totalModels": 58,
+      "modelName": "Qwen3.8 Flash",
+      "modelId": "qwen3.8-flash",
+      "totalModels": 62,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -200,7 +199,7 @@
       "scoreRaw": 0.888,
       "modelName": "GPT-5.6 Sol",
       "modelId": "gpt-5.6-sol",
-      "totalModels": 30,
+      "totalModels": 33,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -230,7 +229,7 @@
       "scoreRaw": 0.575,
       "modelName": "Grok 4.6",
       "modelId": "grok-4.6",
-      "totalModels": 8,
+      "totalModels": 9,
       "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
@@ -275,7 +274,7 @@
       "scoreRaw": 0.722,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 8,
+      "totalModels": 9,
       "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
@@ -350,7 +349,7 @@
       "scoreRaw": 0.881,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 33,
+      "totalModels": 34,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -365,7 +364,7 @@
       "scoreRaw": 0.784,
       "modelName": "GLM-5.3-Flash",
       "modelId": "glm-5.3-flash",
-      "totalModels": 39,
+      "totalModels": 41,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -391,12 +390,12 @@
       "name": "WideSearch",
       "category": "Search",
       "dimension": "toolSearchReliability",
-      "score": 81.9,
-      "scoreRaw": 0.819,
-      "modelName": "Qwen3.8 Max",
-      "modelId": "qwen3.8-max",
-      "totalModels": 10,
-      "trend": "flat",
+      "score": 83.9,
+      "scoreRaw": 0.839,
+      "modelName": "Hy4 preview",
+      "modelId": "hy4-preview",
+      "totalModels": 11,
+      "trend": "up",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
     },
@@ -925,6 +924,14 @@
       "agiDistance": 22.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-08-30T08:04:58.229Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Aug 31, 2026",
+      "agiReadiness": 77.4,
+      "agiDistance": 22.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-08-31T08:23:41.332Z",
       "formula": "agi-readiness-v2"
     }
   ],
