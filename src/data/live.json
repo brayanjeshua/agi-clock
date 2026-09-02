@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-01T07:31:21.821Z",
+  "updatedAt": "2026-09-02T06:57:03.874Z",
   "agiReadiness": 77.4,
   "agiDistance": 22.6,
   "bottleneckDimension": {
@@ -21,8 +21,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 84.7,
-      "distance": 15.3,
+      "score": 84.8,
+      "distance": 15.2,
       "benchmarkCount": 5
     },
     {
@@ -75,12 +75,12 @@
       "name": "Humanity's Last Exam",
       "category": "Expert Knowledge",
       "dimension": "reasoningKnowledge",
-      "score": 64.7,
-      "scoreRaw": 0.647,
-      "modelName": "Claude Opus 5",
-      "modelId": "claude-opus-5",
-      "totalModels": 102,
-      "trend": "flat",
+      "score": 65,
+      "scoreRaw": 0.65,
+      "modelName": "Claude Fable 5.1",
+      "modelId": "claude-fable-5-1",
+      "totalModels": 103,
+      "trend": "up",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
     },
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8-Flash-Next",
-      "modelId": "qwen3.8-flash-next",
+      "modelName": "Qwen3.8 Flash",
+      "modelId": "qwen3.8-flash",
       "totalModels": 62,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -940,6 +940,14 @@
       "agiDistance": 22.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-01T07:31:21.821Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 2, 2026",
+      "agiReadiness": 77.4,
+      "agiDistance": 22.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-02T06:57:03.874Z",
       "formula": "agi-readiness-v2"
     }
   ],
