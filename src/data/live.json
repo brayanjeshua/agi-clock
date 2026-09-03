@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-02T06:57:03.874Z",
-  "agiReadiness": 77.4,
-  "agiDistance": 22.6,
+  "updatedAt": "2026-09-03T07:00:50.193Z",
+  "agiReadiness": 77.5,
+  "agiDistance": 22.5,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -30,8 +30,8 @@
       "name": "Coding + Engineering",
       "weight": 0.25,
       "description": "Software engineering, competitive coding, terminal work, and multi-step code tasks.",
-      "score": 81.1,
-      "distance": 18.9,
+      "score": 81.3,
+      "distance": 18.7,
       "benchmarkCount": 5
     },
     {
@@ -80,7 +80,7 @@
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
       "totalModels": 103,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
     },
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8 Flash",
-      "modelId": "qwen3.8-flash",
+      "modelName": "Qwen3.8-Flash-Next",
+      "modelId": "qwen3.8-flash-next",
       "totalModels": 62,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -195,12 +195,12 @@
       "name": "Terminal-Bench 2.1",
       "category": "Terminal Work",
       "dimension": "codingEngineering",
-      "score": 88.8,
-      "scoreRaw": 0.888,
-      "modelName": "GPT-5.6 Sol",
-      "modelId": "gpt-5.6-sol",
-      "totalModels": 33,
-      "trend": "flat",
+      "score": 89.4,
+      "scoreRaw": 0.894,
+      "modelName": "Gemini 3.8 Flash",
+      "modelId": "gemini-3.8-flash",
+      "totalModels": 35,
+      "trend": "up",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -409,7 +409,7 @@
       "scoreRaw": 0.95,
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
-      "totalModels": 9,
+      "totalModels": 10,
       "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
@@ -948,6 +948,14 @@
       "agiDistance": 22.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-02T06:57:03.874Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 3, 2026",
+      "agiReadiness": 77.5,
+      "agiDistance": 22.5,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-03T07:00:50.193Z",
       "formula": "agi-readiness-v2"
     }
   ],
