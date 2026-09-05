@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-04T07:05:02.622Z",
+  "updatedAt": "2026-09-05T06:48:37.107Z",
   "agiReadiness": 78.2,
   "agiDistance": 21.8,
   "bottleneckDimension": {
@@ -65,7 +65,7 @@
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
       "totalModels": 18,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:arc-agi-v2",
       "description": "Abstract grid transformation tasks for fluid reasoning and novel problem solving."
     },
@@ -95,7 +95,7 @@
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
       "totalModels": 247,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
     },
@@ -380,7 +380,7 @@
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
       "totalModels": 63,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -964,6 +964,14 @@
       "agiDistance": 21.8,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-04T07:05:02.622Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 5, 2026",
+      "agiReadiness": 78.2,
+      "agiDistance": 21.8,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-05T06:48:37.107Z",
       "formula": "agi-readiness-v2"
     }
   ],
