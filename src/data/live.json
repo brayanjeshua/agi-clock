@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-08T07:03:55.692Z",
-  "agiReadiness": 78.2,
-  "agiDistance": 21.8,
+  "updatedAt": "2026-09-09T07:12:46.941Z",
+  "agiReadiness": 78.3,
+  "agiDistance": 21.7,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
-    "score": 63.1,
-    "distance": 36.9
+    "score": 63.4,
+    "distance": 36.6
   },
   "eta": {
     "status": "trend_unclear",
@@ -39,8 +39,8 @@
       "name": "Agents + Autonomy",
       "weight": 0.3,
       "description": "Computer use, long-horizon professional workflows, planning, and applied office/finance tasks.",
-      "score": 63.1,
-      "distance": 36.9,
+      "score": 63.4,
+      "distance": 36.6,
       "benchmarkCount": 6
     },
     {
@@ -64,7 +64,7 @@
       "scoreRaw": 0.95,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 18,
+      "totalModels": 19,
       "trend": "flat",
       "source": "llm-stats:arc-agi-v2",
       "description": "Abstract grid transformation tasks for fluid reasoning and novel problem solving."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 247,
+      "totalModels": 249,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -109,7 +109,7 @@
       "scoreRaw": 0.9033,
       "modelName": "Sakana Namazu",
       "modelId": "sakana-namazu",
-      "totalModels": 138,
+      "totalModels": 142,
       "trend": "flat",
       "source": "llm-stats:mmlu-pro",
       "description": "Harder professional knowledge benchmark across academic and applied domains."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 113,
+      "totalModels": 116,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 55,
+      "totalModels": 57,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -167,9 +167,9 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8 Flash",
-      "modelId": "qwen3.8-flash",
-      "totalModels": 62,
+      "modelName": "Qwen3.8-Flash-Next",
+      "modelId": "qwen3.8-flash-next",
+      "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.894,
       "modelName": "Gemini 3.8 Flash",
       "modelId": "gemini-3.8-flash",
-      "totalModels": 35,
+      "totalModels": 38,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -214,7 +214,7 @@
       "scoreRaw": 0.788,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 20,
+      "totalModels": 21,
       "trend": "flat",
       "source": "llm-stats:osworld",
       "description": "Real desktop/web application tasks across operating systems and multi-app workflows."
@@ -229,7 +229,7 @@
       "scoreRaw": 0.575,
       "modelName": "Grok 4.6",
       "modelId": "grok-4.6",
-      "totalModels": 9,
+      "totalModels": 10,
       "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
@@ -244,7 +244,7 @@
       "scoreRaw": 0.497,
       "modelName": "Qwen3.5-397B-A17B",
       "modelId": "qwen3.5-397b-a17b",
-      "totalModels": 10,
+      "totalModels": 11,
       "trend": "flat",
       "source": "llm-stats:vita-bench",
       "description": "Virtual task automation for multi-step real-world workflows."
@@ -259,7 +259,7 @@
       "scoreRaw": 0.623,
       "modelName": "Qwen3.7-Plus",
       "modelId": "qwen3.7-plus",
-      "totalModels": 9,
+      "totalModels": 10,
       "trend": "flat",
       "source": "llm-stats:deep-planning",
       "description": "Complex multi-step planning, goal decomposition, and long-horizon reasoning."
@@ -285,12 +285,12 @@
       "name": "Finance Agent v2",
       "category": "Finance Work",
       "dimension": "agentsAutonomy",
-      "score": 57.9,
-      "scoreRaw": 0.5786,
-      "modelName": "Gemini 3.5 Flash",
-      "modelId": "gemini-3.5-flash",
-      "totalModels": 26,
-      "trend": "flat",
+      "score": 59.8,
+      "scoreRaw": 0.5981,
+      "modelName": "Ling 3.0 Flash Fin",
+      "modelId": "ling-3.0-flash-fin",
+      "totalModels": 27,
+      "trend": "up",
       "source": "llm-stats:finance-agent-v2",
       "description": "Agentic financial analysis workflows over realistic business tasks."
     },
@@ -349,7 +349,7 @@
       "scoreRaw": 0.881,
       "modelName": "Muse Spark 1.1",
       "modelId": "muse-spark-1.1",
-      "totalModels": 34,
+      "totalModels": 36,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -364,7 +364,7 @@
       "scoreRaw": 0.784,
       "modelName": "GLM-5.3-Flash",
       "modelId": "glm-5.3-flash",
-      "totalModels": 41,
+      "totalModels": 42,
       "trend": "flat",
       "source": "llm-stats:toolathlon",
       "description": "Multi-tool proficiency across diverse tool-use categories."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.915,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 63,
+      "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -394,7 +394,7 @@
       "scoreRaw": 0.839,
       "modelName": "Hy4 preview",
       "modelId": "hy4-preview",
-      "totalModels": 11,
+      "totalModels": 14,
       "trend": "flat",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
@@ -996,6 +996,14 @@
       "agiDistance": 21.8,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-08T07:03:55.692Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 9, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-09T07:12:46.941Z",
       "formula": "agi-readiness-v2"
     }
   ],
