@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-09T07:12:46.941Z",
+  "updatedAt": "2026-09-10T07:09:10.483Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -290,7 +290,7 @@
       "modelName": "Ling 3.0 Flash Fin",
       "modelId": "ling-3.0-flash-fin",
       "totalModels": 27,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:finance-agent-v2",
       "description": "Agentic financial analysis workflows over realistic business tasks."
     },
@@ -1004,6 +1004,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-09T07:12:46.941Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 10, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-10T07:09:10.483Z",
       "formula": "agi-readiness-v2"
     }
   ],
