@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-10T07:09:10.483Z",
+  "updatedAt": "2026-09-11T07:08:25.901Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -30,8 +30,8 @@
       "name": "Coding + Engineering",
       "weight": 0.25,
       "description": "Software engineering, competitive coding, terminal work, and multi-step code tasks.",
-      "score": 81.3,
-      "distance": 18.7,
+      "score": 81.5,
+      "distance": 18.5,
       "benchmarkCount": 5
     },
     {
@@ -79,7 +79,7 @@
       "scoreRaw": 0.65,
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
-      "totalModels": 103,
+      "totalModels": 104,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 249,
+      "totalModels": 250,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8-Flash-Next",
-      "modelId": "qwen3.8-flash-next",
+      "modelName": "Qwen3.8 Flash",
+      "modelId": "qwen3.8-flash",
       "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -195,12 +195,12 @@
       "name": "Terminal-Bench 2.1",
       "category": "Terminal Work",
       "dimension": "codingEngineering",
-      "score": 89.4,
-      "scoreRaw": 0.894,
-      "modelName": "Gemini 3.8 Flash",
-      "modelId": "gemini-3.8-flash",
-      "totalModels": 38,
-      "trend": "flat",
+      "score": 90.6,
+      "scoreRaw": 0.9059999999999999,
+      "modelName": "DeepSeek-V4.1-Flash",
+      "modelId": "deepseek-v4.1-flash",
+      "totalModels": 39,
+      "trend": "up",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -1012,6 +1012,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-10T07:09:10.483Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 11, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-11T07:08:25.901Z",
       "formula": "agi-readiness-v2"
     }
   ],
