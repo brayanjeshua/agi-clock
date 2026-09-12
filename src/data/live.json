@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-11T07:08:25.901Z",
+  "updatedAt": "2026-09-12T07:00:05.603Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -200,7 +200,7 @@
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
       "totalModels": 39,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -1020,6 +1020,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-11T07:08:25.901Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 12, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-12T07:00:05.603Z",
       "formula": "agi-readiness-v2"
     }
   ],
