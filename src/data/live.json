@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-15T07:27:43.675Z",
+  "updatedAt": "2026-09-16T07:26:23.489Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -48,8 +48,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 85.2,
-      "distance": 14.8,
+      "score": 85.4,
+      "distance": 14.6,
       "benchmarkCount": 8
     }
   ],
@@ -154,7 +154,7 @@
       "scoreRaw": 0.8,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 57,
+      "totalModels": 58,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.9059999999999999,
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
-      "totalModels": 39,
+      "totalModels": 40,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -375,12 +375,12 @@
       "name": "BrowseComp",
       "category": "Search",
       "dimension": "toolSearchReliability",
-      "score": 91.5,
-      "scoreRaw": 0.915,
-      "modelName": "GPT-6 Astra",
-      "modelId": "gpt-6-astra",
-      "totalModels": 66,
-      "trend": "flat",
+      "score": 92.5,
+      "scoreRaw": 0.925,
+      "modelName": "Atria Dawn Preview",
+      "modelId": "atria-dawn-preview",
+      "totalModels": 67,
+      "trend": "up",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -394,7 +394,7 @@
       "scoreRaw": 0.839,
       "modelName": "Hy4 preview",
       "modelId": "hy4-preview",
-      "totalModels": 14,
+      "totalModels": 15,
       "trend": "flat",
       "source": "llm-stats:widesearch",
       "description": "Broad, parallel search operations across multiple sources."
@@ -405,12 +405,12 @@
       "name": "DeepSearchQA",
       "category": "Search",
       "dimension": "toolSearchReliability",
-      "score": 95,
-      "scoreRaw": 0.95,
-      "modelName": "Kimi K3",
-      "modelId": "kimi-k3",
-      "totalModels": 10,
-      "trend": "flat",
+      "score": 96,
+      "scoreRaw": 0.96,
+      "modelName": "Atria Dawn Preview",
+      "modelId": "atria-dawn-preview",
+      "totalModels": 11,
+      "trend": "up",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
     }
@@ -1052,6 +1052,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-15T07:27:43.675Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 16, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-16T07:26:23.489Z",
       "formula": "agi-readiness-v2"
     }
   ],
