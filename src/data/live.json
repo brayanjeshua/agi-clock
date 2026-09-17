@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-16T07:26:23.489Z",
+  "updatedAt": "2026-09-17T07:23:42.668Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -380,7 +380,7 @@
       "modelName": "Atria Dawn Preview",
       "modelId": "atria-dawn-preview",
       "totalModels": 67,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -410,7 +410,7 @@
       "modelName": "Atria Dawn Preview",
       "modelId": "atria-dawn-preview",
       "totalModels": 11,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
     }
@@ -1060,6 +1060,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-16T07:26:23.489Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 17, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-17T07:23:42.668Z",
       "formula": "agi-readiness-v2"
     }
   ],
