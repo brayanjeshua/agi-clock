@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-21T07:47:29.661Z",
+  "updatedAt": "2026-09-22T07:30:30.703Z",
   "agiReadiness": 78.3,
   "agiDistance": 21.7,
   "bottleneckDimension": {
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8 Flash",
-      "modelId": "qwen3.8-flash",
+      "modelName": "Qwen3.8-Flash-Next",
+      "modelId": "qwen3.8-flash-next",
       "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -199,7 +199,7 @@
       "scoreRaw": 0.9059999999999999,
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
-      "totalModels": 40,
+      "totalModels": 42,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -1100,6 +1100,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-21T07:47:29.661Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 22, 2026",
+      "agiReadiness": 78.3,
+      "agiDistance": 21.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-22T07:30:30.703Z",
       "formula": "agi-readiness-v2"
     }
   ],
