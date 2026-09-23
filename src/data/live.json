@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-22T07:30:30.703Z",
-  "agiReadiness": 78.3,
-  "agiDistance": 21.7,
+  "updatedAt": "2026-09-23T07:33:31.393Z",
+  "agiReadiness": 78.8,
+  "agiDistance": 21.2,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -30,8 +30,8 @@
       "name": "Coding + Engineering",
       "weight": 0.25,
       "description": "Software engineering, competitive coding, terminal work, and multi-step code tasks.",
-      "score": 81.5,
-      "distance": 18.5,
+      "score": 83.5,
+      "distance": 16.5,
       "benchmarkCount": 5
     },
     {
@@ -150,12 +150,12 @@
       "name": "SWE-Bench Pro",
       "category": "Engineering",
       "dimension": "codingEngineering",
-      "score": 80,
-      "scoreRaw": 0.8,
-      "modelName": "Claude Fable 5",
-      "modelId": "claude-fable-5",
-      "totalModels": 58,
-      "trend": "flat",
+      "score": 89.9,
+      "scoreRaw": 0.899,
+      "modelName": "Claude Opus 5.5",
+      "modelId": "claude-opus-5-5",
+      "totalModels": 59,
+      "trend": "up",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
     },
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8-Flash-Next",
-      "modelId": "qwen3.8-flash-next",
+      "modelName": "Qwen3.8 Flash",
+      "modelId": "qwen3.8-flash",
       "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -274,7 +274,7 @@
       "scoreRaw": 0.722,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 9,
+      "totalModels": 10,
       "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
@@ -1108,6 +1108,14 @@
       "agiDistance": 21.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-22T07:30:30.703Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 23, 2026",
+      "agiReadiness": 78.8,
+      "agiDistance": 21.2,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-23T07:33:31.393Z",
       "formula": "agi-readiness-v2"
     }
   ],
