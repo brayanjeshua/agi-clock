@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-23T07:33:31.393Z",
+  "updatedAt": "2026-09-24T07:26:00.282Z",
   "agiReadiness": 78.8,
   "agiDistance": 21.2,
   "bottleneckDimension": {
@@ -155,7 +155,7 @@
       "modelName": "Claude Opus 5.5",
       "modelId": "claude-opus-5-5",
       "totalModels": 59,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
     },
@@ -1116,6 +1116,14 @@
       "agiDistance": 21.2,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-23T07:33:31.393Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 24, 2026",
+      "agiReadiness": 78.8,
+      "agiDistance": 21.2,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-24T07:26:00.282Z",
       "formula": "agi-readiness-v2"
     }
   ],
