@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-09-28T08:27:13.288Z",
+  "updatedAt": "2026-09-29T08:07:40.321Z",
   "agiReadiness": 78.8,
   "agiDistance": 21.2,
   "bottleneckDimension": {
@@ -154,7 +154,7 @@
       "scoreRaw": 0.899,
       "modelName": "Claude Opus 5.5",
       "modelId": "claude-opus-5-5",
-      "totalModels": 59,
+      "totalModels": 60,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -274,7 +274,7 @@
       "scoreRaw": 0.722,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 10,
+      "totalModels": 11,
       "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
@@ -1156,6 +1156,14 @@
       "agiDistance": 21.2,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-09-28T08:27:13.288Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Sep 29, 2026",
+      "agiReadiness": 78.8,
+      "agiDistance": 21.2,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-09-29T08:07:40.321Z",
       "formula": "agi-readiness-v2"
     }
   ],
