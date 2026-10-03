@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-02T08:10:51.528Z",
+  "updatedAt": "2026-10-03T07:48:27.339Z",
   "agiReadiness": 78.8,
   "agiDistance": 21.2,
   "bottleneckDimension": {
@@ -1188,6 +1188,14 @@
       "agiDistance": 21.2,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-02T08:10:51.528Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 3, 2026",
+      "agiReadiness": 78.8,
+      "agiDistance": 21.2,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-03T07:48:27.339Z",
       "formula": "agi-readiness-v2"
     }
   ],
