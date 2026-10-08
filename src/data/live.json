@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-07T08:20:33.616Z",
-  "agiReadiness": 78.8,
-  "agiDistance": 21.2,
+  "updatedAt": "2026-10-08T08:36:34.390Z",
+  "agiReadiness": 79,
+  "agiDistance": 21,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
-    "score": 63.4,
-    "distance": 36.6
+    "score": 63.8,
+    "distance": 36.2
   },
   "eta": {
     "status": "trend_unclear",
@@ -39,8 +39,8 @@
       "name": "Agents + Autonomy",
       "weight": 0.3,
       "description": "Computer use, long-horizon professional workflows, planning, and applied office/finance tasks.",
-      "score": 63.4,
-      "distance": 36.6,
+      "score": 63.8,
+      "distance": 36.2,
       "benchmarkCount": 6
     },
     {
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 116,
+      "totalModels": 117,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.899,
       "modelName": "Claude Opus 5.5",
       "modelId": "claude-opus-5-5",
-      "totalModels": 60,
+      "totalModels": 61,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.9059999999999999,
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
-      "totalModels": 42,
+      "totalModels": 43,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -225,12 +225,12 @@
       "name": "APEX-Agents",
       "category": "Long-Horizon Agents",
       "dimension": "agentsAutonomy",
-      "score": 57.5,
-      "scoreRaw": 0.575,
-      "modelName": "Grok 4.6",
-      "modelId": "grok-4.6",
-      "totalModels": 10,
-      "trend": "flat",
+      "score": 60,
+      "scoreRaw": 0.6,
+      "modelName": "GPT-6.1 Sol",
+      "modelId": "gpt-6.1-sol",
+      "totalModels": 11,
+      "trend": "up",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -274,7 +274,7 @@
       "scoreRaw": 0.722,
       "modelName": "Seed 2.1 Pro",
       "modelId": "seed-2.1-pro",
-      "totalModels": 11,
+      "totalModels": 12,
       "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
@@ -289,7 +289,7 @@
       "scoreRaw": 0.5981,
       "modelName": "Ling 3.0 Flash Fin",
       "modelId": "ling-3.0-flash-fin",
-      "totalModels": 27,
+      "totalModels": 29,
       "trend": "flat",
       "source": "llm-stats:finance-agent-v2",
       "description": "Agentic financial analysis workflows over realistic business tasks."
@@ -1228,6 +1228,14 @@
       "agiDistance": 21.2,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-07T08:20:33.616Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 8, 2026",
+      "agiReadiness": 79,
+      "agiDistance": 21,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-08T08:36:34.390Z",
       "formula": "agi-readiness-v2"
     }
   ],
