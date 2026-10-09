@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-08T08:36:34.390Z",
+  "updatedAt": "2026-10-09T08:42:02.881Z",
   "agiReadiness": 79,
   "agiDistance": 21,
   "bottleneckDimension": {
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8 Flash",
-      "modelId": "qwen3.8-flash",
+      "modelName": "Qwen3.8-Flash-Next",
+      "modelId": "qwen3.8-flash-next",
       "totalModels": 66,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -230,7 +230,7 @@
       "modelName": "GPT-6.1 Sol",
       "modelId": "gpt-6.1-sol",
       "totalModels": 11,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -1236,6 +1236,14 @@
       "agiDistance": 21,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-08T08:36:34.390Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 9, 2026",
+      "agiReadiness": 79,
+      "agiDistance": 21,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-09T08:42:02.881Z",
       "formula": "agi-readiness-v2"
     }
   ],
