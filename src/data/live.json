@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-13T09:08:06.709Z",
+  "updatedAt": "2026-10-14T07:17:53.784Z",
   "agiReadiness": 78.9,
   "agiDistance": 21.1,
   "bottleneckDimension": {
@@ -380,7 +380,7 @@
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
       "totalModels": 66,
-      "trend": "down",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -410,7 +410,7 @@
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
       "totalModels": 10,
-      "trend": "down",
+      "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
     }
@@ -1276,6 +1276,14 @@
       "agiDistance": 21.1,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-13T09:08:06.709Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 14, 2026",
+      "agiReadiness": 78.9,
+      "agiDistance": 21.1,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-14T07:17:53.784Z",
       "formula": "agi-readiness-v2"
     }
   ],
