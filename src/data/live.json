@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-19T07:30:29.697Z",
+  "updatedAt": "2026-10-20T07:19:18.384Z",
   "agiReadiness": 78.9,
   "agiDistance": 21.1,
   "bottleneckDimension": {
@@ -48,8 +48,8 @@
       "name": "Tool Use + Search Reliability",
       "weight": 0.15,
       "description": "Tool calling, web/search persistence, user-policy following, and repeated agent reliability proxies.",
-      "score": 85.2,
-      "distance": 14.8,
+      "score": 85.3,
+      "distance": 14.7,
       "benchmarkCount": 8
     }
   ],
@@ -79,7 +79,7 @@
       "scoreRaw": 0.65,
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
-      "totalModels": 104,
+      "totalModels": 108,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 250,
+      "totalModels": 254,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 117,
+      "totalModels": 119,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.899,
       "modelName": "Claude Opus 5.5",
       "modelId": "claude-opus-5-5",
-      "totalModels": 60,
+      "totalModels": 61,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -169,7 +169,7 @@
       "scoreRaw": 0.919,
       "modelName": "Qwen3.8 Flash",
       "modelId": "qwen3.8-flash",
-      "totalModels": 66,
+      "totalModels": 67,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.9059999999999999,
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
-      "totalModels": 42,
+      "totalModels": 46,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -345,12 +345,12 @@
       "name": "MCP Atlas",
       "category": "Tool Use",
       "dimension": "toolSearchReliability",
-      "score": 88.1,
-      "scoreRaw": 0.881,
-      "modelName": "Muse Spark 1.1",
-      "modelId": "muse-spark-1.1",
-      "totalModels": 36,
-      "trend": "flat",
+      "score": 89.2,
+      "scoreRaw": 0.892,
+      "modelName": "Muse Spark Open",
+      "modelId": "muse-spark-open",
+      "totalModels": 38,
+      "trend": "up",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
     },
@@ -379,7 +379,7 @@
       "scoreRaw": 0.915,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 66,
+      "totalModels": 68,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -1324,6 +1324,14 @@
       "agiDistance": 21.1,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-19T07:30:29.697Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 20, 2026",
+      "agiReadiness": 78.9,
+      "agiDistance": 21.1,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-20T07:19:18.384Z",
       "formula": "agi-readiness-v2"
     }
   ],
