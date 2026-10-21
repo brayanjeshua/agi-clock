@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-20T07:19:18.384Z",
+  "updatedAt": "2026-10-21T07:18:19.972Z",
   "agiReadiness": 78.9,
   "agiDistance": 21.1,
   "bottleneckDimension": {
@@ -350,7 +350,7 @@
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
       "totalModels": 38,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
     },
@@ -1332,6 +1332,14 @@
       "agiDistance": 21.1,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-20T07:19:18.384Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 21, 2026",
+      "agiReadiness": 78.9,
+      "agiDistance": 21.1,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-21T07:18:19.972Z",
       "formula": "agi-readiness-v2"
     }
   ],
