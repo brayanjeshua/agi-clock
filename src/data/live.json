@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-21T07:18:19.972Z",
+  "updatedAt": "2026-10-22T07:19:11.879Z",
   "agiReadiness": 78.9,
   "agiDistance": 21.1,
   "bottleneckDimension": {
@@ -79,7 +79,7 @@
       "scoreRaw": 0.65,
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
-      "totalModels": 108,
+      "totalModels": 109,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 254,
+      "totalModels": 256,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 119,
+      "totalModels": 120,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -154,7 +154,7 @@
       "scoreRaw": 0.899,
       "modelName": "Claude Opus 5.5",
       "modelId": "claude-opus-5-5",
-      "totalModels": 61,
+      "totalModels": 62,
       "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.9059999999999999,
       "modelName": "DeepSeek-V4.1-Flash",
       "modelId": "deepseek-v4.1-flash",
-      "totalModels": 46,
+      "totalModels": 47,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -349,7 +349,7 @@
       "scoreRaw": 0.892,
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
-      "totalModels": 38,
+      "totalModels": 39,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.915,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 68,
+      "totalModels": 69,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -409,7 +409,7 @@
       "scoreRaw": 0.95,
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
-      "totalModels": 10,
+      "totalModels": 12,
       "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
@@ -1340,6 +1340,14 @@
       "agiDistance": 21.1,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-21T07:18:19.972Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 22, 2026",
+      "agiReadiness": 78.9,
+      "agiDistance": 21.1,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-22T07:19:11.879Z",
       "formula": "agi-readiness-v2"
     }
   ],
