@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-10-30T08:20:21.747Z",
+  "updatedAt": "2026-10-31T08:10:15.736Z",
   "agiReadiness": 79.4,
   "agiDistance": 20.6,
   "bottleneckDimension": {
@@ -200,7 +200,7 @@
       "modelName": "SWE-2",
       "modelId": "swe-2",
       "totalModels": 53,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
     },
@@ -230,7 +230,7 @@
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
       "totalModels": 13,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -380,7 +380,7 @@
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
       "totalModels": 73,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
     },
@@ -1412,6 +1412,14 @@
       "agiDistance": 20.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-10-30T08:20:21.747Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Oct 31, 2026",
+      "agiReadiness": 79.4,
+      "agiDistance": 20.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-10-31T08:10:15.736Z",
       "formula": "agi-readiness-v2"
     }
   ],
