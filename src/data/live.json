@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-02T09:05:11.286Z",
+  "updatedAt": "2026-11-03T09:12:38.298Z",
   "agiReadiness": 79.4,
   "agiDistance": 20.6,
   "bottleneckDimension": {
@@ -79,7 +79,7 @@
       "scoreRaw": 0.65,
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
-      "totalModels": 115,
+      "totalModels": 116,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 263,
+      "totalModels": 264,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 122,
+      "totalModels": 123,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -169,7 +169,7 @@
       "scoreRaw": 0.919,
       "modelName": "Qwen3.8 Flash",
       "modelId": "qwen3.8-flash",
-      "totalModels": 68,
+      "totalModels": 69,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
       "description": "Contamination-resistant competitive programming tasks collected over time."
@@ -199,7 +199,7 @@
       "scoreRaw": 0.928,
       "modelName": "SWE-2",
       "modelId": "swe-2",
-      "totalModels": 53,
+      "totalModels": 55,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -349,7 +349,7 @@
       "scoreRaw": 0.892,
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
-      "totalModels": 39,
+      "totalModels": 41,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.921,
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
-      "totalModels": 73,
+      "totalModels": 74,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -1436,6 +1436,14 @@
       "agiDistance": 20.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-02T09:05:11.286Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 3, 2026",
+      "agiReadiness": 79.4,
+      "agiDistance": 20.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-03T09:12:38.298Z",
       "formula": "agi-readiness-v2"
     }
   ],
