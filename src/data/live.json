@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-08T08:45:24.528Z",
+  "updatedAt": "2026-11-09T09:24:55.643Z",
   "agiReadiness": 79.4,
   "agiDistance": 20.6,
   "bottleneckDimension": {
@@ -79,7 +79,7 @@
       "scoreRaw": 0.65,
       "modelName": "Claude Fable 5.1",
       "modelId": "claude-fable-5-1",
-      "totalModels": 116,
+      "totalModels": 117,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -94,7 +94,7 @@
       "scoreRaw": 0.96,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 264,
+      "totalModels": 265,
       "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
@@ -139,7 +139,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 123,
+      "totalModels": 124,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -349,7 +349,7 @@
       "scoreRaw": 0.892,
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
-      "totalModels": 41,
+      "totalModels": 42,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.921,
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
-      "totalModels": 74,
+      "totalModels": 75,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -1484,6 +1484,14 @@
       "agiDistance": 20.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-08T08:45:24.528Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 9, 2026",
+      "agiReadiness": 79.4,
+      "agiDistance": 20.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-09T09:24:55.643Z",
       "formula": "agi-readiness-v2"
     }
   ],
