@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-09T09:24:55.643Z",
-  "agiReadiness": 79.4,
-  "agiDistance": 20.6,
+  "updatedAt": "2026-11-10T09:29:02.800Z",
+  "agiReadiness": 80.1,
+  "agiDistance": 19.9,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
-    "score": 65,
-    "distance": 35
+    "score": 65.1,
+    "distance": 34.9
   },
   "eta": {
     "status": "trend_unclear",
@@ -21,8 +21,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 87.1,
-      "distance": 12.9,
+      "score": 88.7,
+      "distance": 11.3,
       "benchmarkCount": 5
     },
     {
@@ -30,8 +30,8 @@
       "name": "Coding + Engineering",
       "weight": 0.25,
       "description": "Software engineering, competitive coding, terminal work, and multi-step code tasks.",
-      "score": 83.9,
-      "distance": 16.1,
+      "score": 84.5,
+      "distance": 15.5,
       "benchmarkCount": 5
     },
     {
@@ -39,8 +39,8 @@
       "name": "Agents + Autonomy",
       "weight": 0.3,
       "description": "Computer use, long-horizon professional workflows, planning, and applied office/finance tasks.",
-      "score": 65,
-      "distance": 35,
+      "score": 65.1,
+      "distance": 34.9,
       "benchmarkCount": 6
     },
     {
@@ -75,12 +75,12 @@
       "name": "Humanity's Last Exam",
       "category": "Expert Knowledge",
       "dimension": "reasoningKnowledge",
-      "score": 65,
-      "scoreRaw": 0.65,
-      "modelName": "Claude Fable 5.1",
-      "modelId": "claude-fable-5-1",
-      "totalModels": 117,
-      "trend": "flat",
+      "score": 73.2,
+      "scoreRaw": 0.732,
+      "modelName": "Claude Fable 5.2",
+      "modelId": "claude-fable-5-2",
+      "totalModels": 118,
+      "trend": "up",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
     },
@@ -150,12 +150,12 @@
       "name": "SWE-Bench Pro",
       "category": "Engineering",
       "dimension": "codingEngineering",
-      "score": 89.9,
-      "scoreRaw": 0.899,
-      "modelName": "Claude Opus 5.5",
-      "modelId": "claude-opus-5-5",
-      "totalModels": 63,
-      "trend": "flat",
+      "score": 93,
+      "scoreRaw": 0.93,
+      "modelName": "Claude Fable 5.2",
+      "modelId": "claude-fable-5-2",
+      "totalModels": 64,
+      "trend": "up",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
     },
@@ -270,12 +270,12 @@
       "name": "OfficeQA Pro",
       "category": "Office Work",
       "dimension": "agentsAutonomy",
-      "score": 72.2,
-      "scoreRaw": 0.722,
-      "modelName": "Seed 2.1 Pro",
-      "modelId": "seed-2.1-pro",
-      "totalModels": 13,
-      "trend": "flat",
+      "score": 72.9,
+      "scoreRaw": 0.729,
+      "modelName": "Claude Fable 5.2",
+      "modelId": "claude-fable-5-2",
+      "totalModels": 14,
+      "trend": "up",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
     },
@@ -1492,6 +1492,14 @@
       "agiDistance": 20.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-09T09:24:55.643Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 10, 2026",
+      "agiReadiness": 80.1,
+      "agiDistance": 19.9,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-10T09:29:02.800Z",
       "formula": "agi-readiness-v2"
     }
   ],
