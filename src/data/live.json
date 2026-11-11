@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-10T09:29:02.800Z",
+  "updatedAt": "2026-11-11T09:01:16.212Z",
   "agiReadiness": 80.1,
   "agiDistance": 19.9,
   "bottleneckDimension": {
@@ -80,7 +80,7 @@
       "modelName": "Claude Fable 5.2",
       "modelId": "claude-fable-5-2",
       "totalModels": 118,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
     },
@@ -155,7 +155,7 @@
       "modelName": "Claude Fable 5.2",
       "modelId": "claude-fable-5-2",
       "totalModels": 64,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:swe-bench-pro",
       "description": "Complex real-world software engineering tasks with extended multi-step reasoning."
     },
@@ -275,7 +275,7 @@
       "modelName": "Claude Fable 5.2",
       "modelId": "claude-fable-5-2",
       "totalModels": 14,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
     },
@@ -1500,6 +1500,14 @@
       "agiDistance": 19.9,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-10T09:29:02.800Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 11, 2026",
+      "agiReadiness": 80.1,
+      "agiDistance": 19.9,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-11T09:01:16.212Z",
       "formula": "agi-readiness-v2"
     }
   ],
