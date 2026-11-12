@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-11T09:01:16.212Z",
+  "updatedAt": "2026-11-12T09:30:41.417Z",
   "agiReadiness": 80.1,
   "agiDistance": 19.9,
   "bottleneckDimension": {
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8 Flash",
-      "modelId": "qwen3.8-flash",
+      "modelName": "Qwen3.8-Flash-Next",
+      "modelId": "qwen3.8-flash-next",
       "totalModels": 69,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -199,7 +199,7 @@
       "scoreRaw": 0.928,
       "modelName": "SWE-2",
       "modelId": "swe-2",
-      "totalModels": 55,
+      "totalModels": 56,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -229,7 +229,7 @@
       "scoreRaw": 0.672,
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
-      "totalModels": 13,
+      "totalModels": 14,
       "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
@@ -274,7 +274,7 @@
       "scoreRaw": 0.729,
       "modelName": "Claude Fable 5.2",
       "modelId": "claude-fable-5-2",
-      "totalModels": 14,
+      "totalModels": 15,
       "trend": "flat",
       "source": "llm-stats:officeqa-pro",
       "description": "Professional knowledge-work tasks involving documents, spreadsheets, and office workflows."
@@ -349,7 +349,7 @@
       "scoreRaw": 0.892,
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
-      "totalModels": 42,
+      "totalModels": 43,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -379,7 +379,7 @@
       "scoreRaw": 0.921,
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
-      "totalModels": 75,
+      "totalModels": 76,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -1508,6 +1508,14 @@
       "agiDistance": 19.9,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-11T09:01:16.212Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 12, 2026",
+      "agiReadiness": 80.1,
+      "agiDistance": 19.9,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-12T09:30:41.417Z",
       "formula": "agi-readiness-v2"
     }
   ],
