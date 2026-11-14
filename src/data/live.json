@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-13T09:16:22.206Z",
+  "updatedAt": "2026-11-14T08:46:07.710Z",
   "agiReadiness": 80.1,
   "agiDistance": 19.9,
   "bottleneckDimension": {
@@ -167,8 +167,8 @@
       "dimension": "codingEngineering",
       "score": 91.9,
       "scoreRaw": 0.919,
-      "modelName": "Qwen3.8-Flash-Next",
-      "modelId": "qwen3.8-flash-next",
+      "modelName": "Qwen3.8 Flash",
+      "modelId": "qwen3.8-flash",
       "totalModels": 69,
       "trend": "flat",
       "source": "llm-stats:livecodebench-v6",
@@ -1524,6 +1524,14 @@
       "agiDistance": 19.9,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-13T09:16:22.206Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 14, 2026",
+      "agiReadiness": 80.1,
+      "agiDistance": 19.9,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-14T08:46:07.710Z",
       "formula": "agi-readiness-v2"
     }
   ],
