@@ -1,19 +1,20 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-16T09:14:15.567Z",
-  "agiReadiness": 80.1,
-  "agiDistance": 19.9,
+  "updatedAt": "2026-11-17T10:23:58.131Z",
+  "agiReadiness": 80.3,
+  "agiDistance": 19.7,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
-    "score": 65.1,
-    "distance": 34.9
+    "score": 65.9,
+    "distance": 34.1
   },
   "eta": {
-    "status": "trend_unclear",
-    "year": null,
-    "marginDays": null
+    "status": "estimated",
+    "year": 2027,
+    "marginDays": 133,
+    "daysFromNow": 379
   },
   "dimensions": [
     {
@@ -39,8 +40,8 @@
       "name": "Agents + Autonomy",
       "weight": 0.3,
       "description": "Computer use, long-horizon professional workflows, planning, and applied office/finance tasks.",
-      "score": 65.1,
-      "distance": 34.9,
+      "score": 65.9,
+      "distance": 34.1,
       "benchmarkCount": 6
     },
     {
@@ -79,7 +80,7 @@
       "scoreRaw": 0.732,
       "modelName": "Claude Fable 5.2",
       "modelId": "claude-fable-5-2",
-      "totalModels": 118,
+      "totalModels": 119,
       "trend": "flat",
       "source": "llm-stats:humanity's-last-exam",
       "description": "2,500 expert-vetted multimodal questions across math, science, humanities, and vision."
@@ -225,12 +226,12 @@
       "name": "APEX-Agents",
       "category": "Long-Horizon Agents",
       "dimension": "agentsAutonomy",
-      "score": 67.2,
-      "scoreRaw": 0.672,
-      "modelName": "Kimi K3.1 Pro",
-      "modelId": "kimi-k3.1-pro",
-      "totalModels": 14,
-      "trend": "flat",
+      "score": 72.1,
+      "scoreRaw": 0.721,
+      "modelName": "Qwen4-Max",
+      "modelId": "qwen4-max",
+      "totalModels": 16,
+      "trend": "up",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -1548,6 +1549,14 @@
       "agiDistance": 19.9,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-16T09:14:15.567Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 17, 2026",
+      "agiReadiness": 80.3,
+      "agiDistance": 19.7,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-17T10:23:58.131Z",
       "formula": "agi-readiness-v2"
     }
   ],
