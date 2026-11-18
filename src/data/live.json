@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-17T10:23:58.131Z",
-  "agiReadiness": 80.3,
-  "agiDistance": 19.7,
+  "updatedAt": "2026-11-18T09:54:39.844Z",
+  "agiReadiness": 80.4,
+  "agiDistance": 19.6,
   "bottleneckDimension": {
     "id": "agentsAutonomy",
     "name": "Agents + Autonomy",
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 133,
-    "daysFromNow": 379
+    "marginDays": 125,
+    "daysFromNow": 358
   },
   "dimensions": [
     {
@@ -22,8 +22,8 @@
       "name": "Reasoning + Expert Knowledge",
       "weight": 0.3,
       "description": "Abstract reasoning, expert knowledge, science, math, and frontier closed-ended questions.",
-      "score": 88.7,
-      "distance": 11.3,
+      "score": 88.9,
+      "distance": 11.1,
       "benchmarkCount": 5
     },
     {
@@ -91,12 +91,12 @@
       "name": "GPQA",
       "category": "Science",
       "dimension": "reasoningKnowledge",
-      "score": 96,
-      "scoreRaw": 0.96,
-      "modelName": "GPT-6 Astra",
-      "modelId": "gpt-6-astra",
-      "totalModels": 265,
-      "trend": "flat",
+      "score": 97,
+      "scoreRaw": 0.97,
+      "modelName": "GPT-6.2 Astra",
+      "modelId": "gpt-6.2-astra",
+      "totalModels": 267,
+      "trend": "up",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
     },
@@ -231,7 +231,7 @@
       "modelName": "Qwen4-Max",
       "modelId": "qwen4-max",
       "totalModels": 16,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:apex-agents",
       "description": "Long-horizon professional tasks requiring sustained planning and execution."
     },
@@ -1557,6 +1557,14 @@
       "agiDistance": 19.7,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-17T10:23:58.131Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 18, 2026",
+      "agiReadiness": 80.4,
+      "agiDistance": 19.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-18T09:54:39.844Z",
       "formula": "agi-readiness-v2"
     }
   ],
