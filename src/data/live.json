@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-18T09:54:39.844Z",
+  "updatedAt": "2026-11-19T10:01:13.660Z",
   "agiReadiness": 80.4,
   "agiDistance": 19.6,
   "bottleneckDimension": {
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 125,
-    "daysFromNow": 358
+    "marginDays": 120,
+    "daysFromNow": 344
   },
   "dimensions": [
     {
@@ -96,7 +96,7 @@
       "modelName": "GPT-6.2 Astra",
       "modelId": "gpt-6.2-astra",
       "totalModels": 267,
-      "trend": "up",
+      "trend": "flat",
       "source": "llm-stats:gpqa",
       "description": "PhD-level questions in biology, chemistry, and physics."
     },
@@ -1565,6 +1565,14 @@
       "agiDistance": 19.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-18T09:54:39.844Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 19, 2026",
+      "agiReadiness": 80.4,
+      "agiDistance": 19.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-19T10:01:13.660Z",
       "formula": "agi-readiness-v2"
     }
   ],
