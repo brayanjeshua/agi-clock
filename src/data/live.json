@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-20T09:50:20.607Z",
+  "updatedAt": "2026-11-21T09:25:32.387Z",
   "agiReadiness": 80.4,
   "agiDistance": 19.6,
   "bottleneckDimension": {
@@ -13,8 +13,8 @@
   "eta": {
     "status": "estimated",
     "year": 2027,
-    "marginDays": 117,
-    "daysFromNow": 335
+    "marginDays": 115,
+    "daysFromNow": 330
   },
   "dimensions": [
     {
@@ -65,7 +65,7 @@
       "scoreRaw": 0.95,
       "modelName": "GPT-6 Astra",
       "modelId": "gpt-6-astra",
-      "totalModels": 19,
+      "totalModels": 20,
       "trend": "flat",
       "source": "llm-stats:arc-agi-v2",
       "description": "Abstract grid transformation tasks for fluid reasoning and novel problem solving."
@@ -140,7 +140,7 @@
       "scoreRaw": 0.95,
       "modelName": "Claude Fable 5",
       "modelId": "claude-fable-5",
-      "totalModels": 124,
+      "totalModels": 125,
       "trend": "flat",
       "source": "llm-stats:swe-bench-verified",
       "description": "Real GitHub issue resolution requiring codebase understanding and patching."
@@ -200,7 +200,7 @@
       "scoreRaw": 0.928,
       "modelName": "SWE-2",
       "modelId": "swe-2",
-      "totalModels": 56,
+      "totalModels": 57,
       "trend": "flat",
       "source": "llm-stats:terminal-bench-2.1",
       "description": "Updated terminal-agent benchmark for autonomous command-line execution."
@@ -350,7 +350,7 @@
       "scoreRaw": 0.892,
       "modelName": "Muse Spark Open",
       "modelId": "muse-spark-open",
-      "totalModels": 43,
+      "totalModels": 44,
       "trend": "flat",
       "source": "llm-stats:mcp-atlas",
       "description": "Scaled tool coordination across complex multi-step tool-use tasks."
@@ -380,7 +380,7 @@
       "scoreRaw": 0.921,
       "modelName": "Kimi K3.1 Pro",
       "modelId": "kimi-k3.1-pro",
-      "totalModels": 76,
+      "totalModels": 77,
       "trend": "flat",
       "source": "llm-stats:browsecomp",
       "description": "Persistent web browsing and hard-to-find information retrieval."
@@ -410,7 +410,7 @@
       "scoreRaw": 0.95,
       "modelName": "Kimi K3",
       "modelId": "kimi-k3",
-      "totalModels": 12,
+      "totalModels": 13,
       "trend": "flat",
       "source": "llm-stats:deepsearchqa",
       "description": "Multi-hop deep search and answer retrieval."
@@ -1581,6 +1581,14 @@
       "agiDistance": 19.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-20T09:50:20.607Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 21, 2026",
+      "agiReadiness": 80.4,
+      "agiDistance": 19.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-21T09:25:32.387Z",
       "formula": "agi-readiness-v2"
     }
   ],
