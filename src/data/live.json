@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "formula": "agi-readiness-v2",
-  "updatedAt": "2026-11-27T10:39:44.613Z",
+  "updatedAt": "2026-11-28T09:58:25.503Z",
   "agiReadiness": 80.4,
   "agiDistance": 19.6,
   "bottleneckDimension": {
@@ -11,10 +11,9 @@
     "distance": 34.1
   },
   "eta": {
-    "status": "estimated",
-    "year": 2027,
-    "marginDays": 135,
-    "daysFromNow": 387
+    "status": "trend_unclear",
+    "year": null,
+    "marginDays": null
   },
   "dimensions": [
     {
@@ -1637,6 +1636,14 @@
       "agiDistance": 19.6,
       "bottleneckDimension": "agentsAutonomy",
       "updatedAt": "2026-11-27T10:39:44.613Z",
+      "formula": "agi-readiness-v2"
+    },
+    {
+      "date": "Nov 28, 2026",
+      "agiReadiness": 80.4,
+      "agiDistance": 19.6,
+      "bottleneckDimension": "agentsAutonomy",
+      "updatedAt": "2026-11-28T09:58:25.503Z",
       "formula": "agi-readiness-v2"
     }
   ],
